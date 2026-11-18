@@ -29,7 +29,7 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://w.ladicdn.com' },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'
+          href: 'https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Open+Sans:wght@400;700&display=swap'
         },
         // Preload critical above-the-fold & Section 2 assets for silky, lag-free first scroll
         { rel: 'preload', as: 'image', href: 'https://w.ladicdn.com/s750x1000/6322a62f2dad980013bb5005/571277216_1401349858664077_4926377004531498903_n-20251030040733-2xnh6.jpg' },

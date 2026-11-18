@@ -1520,8 +1520,15 @@ const loadJmiiWishes = () => {
         listEl.innerHTML = ''
         data.wishes.forEach((w: any) => {
           const item = document.createElement('div')
-          item.className = 'jmii-item'
-          item.innerHTML = '<div class="jmii-name">' + (w.name || 'Khách mời') + '</div><div class="jmii-text">' + (w.content || w.message || '') + '</div>'
+          item.className = 'jmii-wish'
+          const nameEl = document.createElement('div')
+          nameEl.className = 'jmii-name'
+          nameEl.textContent = w.name || 'Khách mời'
+          const msgEl = document.createElement('div')
+          msgEl.className = 'jmii-message'
+          msgEl.textContent = w.content || w.message || ''
+          item.appendChild(nameEl)
+          item.appendChild(msgEl)
           listEl.appendChild(item)
         })
       }
