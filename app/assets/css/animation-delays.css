@@ -1,0 +1,61 @@
+
+/* Staggered transition delays based on template design */
+#HEADLINE5.ladi-animation > *,
+#GROUP7.ladi-animation > *,
+#IMAGE17.ladi-animation > *,
+#IMAGE18.ladi-animation > *,
+#HEADLINE20.ladi-animation > *,
+#HEADLINE33.ladi-animation > *,
+#GROUP15.ladi-animation > *,
+#GROUP16.ladi-animation > *,
+#IMAGE25.ladi-animation > *,
+#HEADLINE40.ladi-animation > *,
+#IMAGE27.ladi-animation > *,
+#IMAGE33.ladi-animation > *,
+#HEADLINE122.ladi-animation > *,
+#HEADLINE129.ladi-animation > *,
+#HEADLINE130.ladi-animation > *,
+#IMAGE15.ladi-animation > *,
+#BOX29.ladi-animation > *,
+#BOX30.ladi-animation > *,
+#BOX31.ladi-animation > *,
+#BOX42.ladi-animation > *,
+#BOX43.ladi-animation > *,
+#BOX44.ladi-animation > *,
+#BOX45.ladi-animation > *,
+#BOX46.ladi-animation > *,
+#BOX47.ladi-animation > *,
+#BOX48.ladi-animation > *,
+#BOX49.ladi-animation > *,
+#IMAGE48.ladi-animation > *,
+#HEADLINE146.ladi-animation > *,
+#GROUP35.ladi-animation > *,
+#GROUP36.ladi-animation > * {
+    transition-delay: 0.35s !important;
+}
+
+#HEADLINE4.ladi-animation > *,
+#GROUP6.ladi-animation > *,
+#HEADLINE19.ladi-animation > *,
+#HEADLINE21.ladi-animation > *,
+#GROUP10.ladi-animation > *,
+#GROUP11.ladi-animation > *,
+#HEADLINE26.ladi-animation > *,
+#HEADLINE27.ladi-animation > *,
+#HEADLINE28.ladi-animation > *,
+#HEADLINE29.ladi-animation > *,
+#HEADLINE30.ladi-animation > *,
+#HEADLINE32.ladi-animation > *,
+#HEADLINE36.ladi-animation > *,
+#IMAGE24.ladi-animation > *,
+#HEADLINE39.ladi-animation > *,
+#HEADLINE41.ladi-animation > *,
+#HEADLINE42.ladi-animation > *,
+#BOX27.ladi-animation > * {
+    transition-delay: 0.17s !important;
+}
+
+#BOX28.ladi-animation > * {
+    transition-delay: 0.24s !important;
+}
+

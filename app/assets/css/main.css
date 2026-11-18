@@ -1,0 +1,258 @@
+/* ========================================================
+   WEDDING 2 - GLOBAL STYLES & TYPOGRAPHY
+   ======================================================== */
+
+/* 1. Custom Wedding Typography */
+@font-face {
+  font-family: 'BeyondPerfection';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('https://w.ladicdn.com/6322a62f2dad980013bb5005/beyondperfection-regular-20251010154005-cnkil.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UVNHoaTay';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('https://w.ladicdn.com/6322a62f2dad980013bb5005/uvnhoatay1-20250703082157-fl9kv.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ArcittyaBegatri';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('https://w.ladicdn.com/6322a62f2dad980013bb5005/1ftv-vip-arcittya-begatri-20250607180534-0x81e.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://w.ladicdn.com/6322a62f2dad980013bb5005/lora-regular-20250728035828-eollg.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://w.ladicdn.com/6322a62f2dad980013bb5005/lora-semibold-20250421105928-zwl-g.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Hastegi';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('https://w.ladicdn.com/6322a62f2dad980013bb5005/1ftv-vip-hastegi-20250323075635-ymzdv.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'HighSpirited';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('https://w.ladicdn.com/6322a62f2dad980013bb5005/1ftv-vip-high-spirited-20250320040602-_0oin.otf') format('opentype');
+}
+
+/* 2. Global CSS Variables & Theme */
+:root {
+  --color-bg: #fbf9f6;
+  --color-bg-alt: #f4eee6;
+  --color-surface: #ffffff;
+  --color-surface-soft: rgba(255, 255, 255, 0.85);
+  
+  --color-primary: #705628;
+  --color-primary-dark: #533e1a;
+  --color-primary-light: #947746;
+  --color-accent-gold: #c29d59;
+  
+  --color-text-title: #705628;
+  --color-text-main: #3d372e;
+  --color-text-muted: #857867;
+  --color-border: #e6ded3;
+  --color-border-gold: rgba(194, 157, 89, 0.4);
+  
+  --font-script: 'BeyondPerfection', 'UVNHoaTay', cursive;
+  --font-script-hand: 'UVNHoaTay', cursive;
+  --font-serif: 'Lora', 'Georgia', serif;
+  --font-display: 'ArcittyaBegatri', 'Lora', serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+  --shadow-sm: 0 2px 8px rgba(112, 86, 40, 0.06);
+  --shadow-md: 0 8px 24px -4px rgba(112, 86, 40, 0.1);
+  --shadow-lg: 0 16px 36px -6px rgba(112, 86, 40, 0.14);
+  
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+}
+
+/* 3. Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Texture Pattern Overlay */
+.plaster-texture {
+  background-image: url('https://w.ladicdn.com/s750x950/6322a62f2dad980013bb5005/_0026_clear-white-plaster-texture-pattern-copy-11-20251020184301-fkysx.png');
+  background-repeat: repeat;
+  background-size: 400px;
+}
+
+/* Mobile-Centered Layout Wrapper (Max 480px on desktop for intimate app feel) */
+.wedding-viewport {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--color-bg);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+}
+
+/* Typography Utility Classes */
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-script-hand {
+  font-family: var(--font-script-hand);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Decorative Gold Lines */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent-gold), transparent);
+  width: 100%;
+  margin: 1.25rem 0;
+}
+
+.gold-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 1rem 0;
+}
+
+.gold-divider::before,
+.gold-divider::after {
+  content: '';
+  height: 1px;
+  width: 40px;
+  background-color: var(--color-accent-gold);
+  opacity: 0.6;
+}
+
+/* Common Section Container */
+.wedding-section {
+  position: relative;
+  padding: 3rem 1.5rem;
+  width: 100%;
+}
+
+/* Button Styles */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #705628 0%, #947746 100%);
+  color: #ffffff;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(112, 86, 40, 0.25);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(112, 86, 40, 0.35);
+  background: linear-gradient(135deg, #5e461e 0%, #836737 100%);
+}
+
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+.btn-gold-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-gold-outline:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+/* Form Styles */
+.form-input, .form-textarea, .form-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(112, 86, 40, 0.12);
+  background-color: #ffffff;
+}
