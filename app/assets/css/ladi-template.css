@@ -5883,8 +5883,8 @@
         @-webkit-keyframes fadeInUpBig {
             0% {
                 opacity: 0;
-                -webkit-transform: translate3d(0, 195px, 0);
-                transform: translate3d(0, 195px, 0);
+                -webkit-transform: translate3d(0, 205px, 0);
+                transform: translate3d(0, 205px, 0);
             }
 
             100% {
@@ -5897,9 +5897,9 @@
         @keyframes fadeInUpBig {
             0% {
                 opacity: 0;
-                -webkit-transform: translate3d(0, 195px, 0);
-                -ms-transform: translate3d(0, 195px, 0);
-                transform: translate3d(0, 195px, 0);
+                -webkit-transform: translate3d(0, 205px, 0);
+                -ms-transform: translate3d(0, 205px, 0);
+                transform: translate3d(0, 205px, 0);
             }
 
             100% {
@@ -6176,11 +6176,10 @@ body {
 .ladi-animation > * {
     -webkit-animation-fill-mode: both !important;
     animation-fill-mode: both !important;
-    animation-duration: 2.2s !important;
-    -webkit-animation-duration: 2.2s !important;
-    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
-    -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
-    will-change: transform, opacity;
+    animation-duration: 2.6s !important;
+    -webkit-animation-duration: 2.6s !important;
+    animation-timing-function: cubic-bezier(0.12, 0.9, 0.2, 1) !important;
+    -webkit-animation-timing-function: cubic-bezier(0.12, 0.9, 0.2, 1) !important;
 }
 
 /* Prevent abrupt 150ms transitions from interfering with slow animations */
@@ -6190,19 +6189,19 @@ body {
 }
 
 /* ==========================================================================
-   SECTION 2: WEDDING INVITATION CARD & PHOTO FLY-IN (MAJESTIC & DRAMATIC)
+   SECTION 2: WEDDING INVITATION CARD & PHOTO FLY-IN (MAJESTIC, SLOW & DRAMATIC)
    ========================================================================== */
 
-/* 1. Thiệp cưới bay lên từ trong phong bì */
+/* 1. Thiệp cưới bay lên từ trong phong bì (Chậm, uy nghiêm, 3.2s) */
 #GROUP6.ladi-animation > .ladi-group {
     animation-name: invitationRiseUp !important;
     -webkit-animation-name: invitationRiseUp !important;
-    animation-duration: 2.6s !important;
-    -webkit-animation-duration: 2.6s !important;
-    animation-delay: 0.15s !important;
-    -webkit-animation-delay: 0.15s !important;
-    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
-    -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+    animation-duration: 3.2s !important;
+    -webkit-animation-duration: 3.2s !important;
+    animation-delay: 0.25s !important;
+    -webkit-animation-delay: 0.25s !important;
+    animation-timing-function: cubic-bezier(0.12, 0.9, 0.2, 1) !important;
+    -webkit-animation-timing-function: cubic-bezier(0.12, 0.9, 0.2, 1) !important;
     animation-fill-mode: both !important;
     will-change: transform, opacity;
 }
@@ -6210,7 +6209,7 @@ body {
 @keyframes invitationRiseUp {
     0% {
         opacity: 0;
-        transform: translate3d(0, 195px, 0);
+        transform: translate3d(0, 205px, 0);
     }
     30% {
         opacity: 0.95;
@@ -6224,7 +6223,7 @@ body {
 @-webkit-keyframes invitationRiseUp {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(0, 195px, 0);
+        -webkit-transform: translate3d(0, 205px, 0);
     }
     30% {
         opacity: 0.95;
@@ -6235,16 +6234,16 @@ body {
     }
 }
 
-/* 2. Ảnh Polaroid bay vào từ góc trên bên phải */
+/* 2. Ảnh Polaroid bay vào từ góc trên bên phải (Chậm, lượn đẹp, 3.0s, trễ 1.05s) */
 #GROUP7.ladi-animation > .ladi-group {
     animation-name: photoFlyIn !important;
     -webkit-animation-name: photoFlyIn !important;
-    animation-duration: 2.4s !important;
-    -webkit-animation-duration: 2.4s !important;
-    animation-delay: 0.75s !important;
-    -webkit-animation-delay: 0.75s !important;
-    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
-    -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+    animation-duration: 3.0s !important;
+    -webkit-animation-duration: 3.0s !important;
+    animation-delay: 1.05s !important;
+    -webkit-animation-delay: 1.05s !important;
+    animation-timing-function: cubic-bezier(0.12, 0.9, 0.2, 1) !important;
+    -webkit-animation-timing-function: cubic-bezier(0.12, 0.9, 0.2, 1) !important;
     animation-fill-mode: both !important;
     will-change: transform, opacity;
 }
@@ -6281,35 +6280,35 @@ body {
     }
 }
 
-/* 3. Hoa lan và chuỗi ngọc trai bay nhẹ vào */
+/* 3. Hoa lan và chuỗi ngọc trai bay nhẹ vào sau khi ảnh hạ cánh (2.6s, trễ 1.4s) */
 #IMAGE15.ladi-animation > .ladi-image,
 #IMAGE17.ladi-animation > .ladi-image,
 #IMAGE18.ladi-animation > .ladi-image {
     animation-name: fadeInUp !important;
     -webkit-animation-name: fadeInUp !important;
-    animation-duration: 2.0s !important;
-    -webkit-animation-duration: 2.0s !important;
-    animation-delay: 0.95s !important;
-    -webkit-animation-delay: 0.95s !important;
-    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
-    -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+    animation-duration: 2.6s !important;
+    -webkit-animation-duration: 2.6s !important;
+    animation-delay: 1.4s !important;
+    -webkit-animation-delay: 1.4s !important;
+    animation-timing-function: cubic-bezier(0.12, 0.9, 0.2, 1) !important;
+    -webkit-animation-timing-function: cubic-bezier(0.12, 0.9, 0.2, 1) !important;
     animation-fill-mode: both !important;
     will-change: transform, opacity;
 }
 
 /* ==========================================================================
-   SECTION 4: GROOM & BRIDE CARDS (SLOW & DISTINCT ENTRANCE)
+   SECTION 4: GROOM & BRIDE CARDS (SLOW & DISTINCT ENTRANCE - 2.8s)
    ========================================================================== */
 
 #GROUP10.ladi-animation > .ladi-group {
     animation-name: fadeInLeftSlow !important;
     -webkit-animation-name: fadeInLeftSlow !important;
-    animation-duration: 2.2s !important;
-    -webkit-animation-duration: 2.2s !important;
-    animation-delay: 0.15s !important;
-    -webkit-animation-delay: 0.15s !important;
-    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
-    -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+    animation-duration: 2.8s !important;
+    -webkit-animation-duration: 2.8s !important;
+    animation-delay: 0.2s !important;
+    -webkit-animation-delay: 0.2s !important;
+    animation-timing-function: cubic-bezier(0.12, 0.9, 0.2, 1) !important;
+    -webkit-animation-timing-function: cubic-bezier(0.12, 0.9, 0.2, 1) !important;
     animation-fill-mode: both !important;
     will-change: transform, opacity;
 }
@@ -6317,12 +6316,12 @@ body {
 #GROUP11.ladi-animation > .ladi-group {
     animation-name: fadeInRightSlow !important;
     -webkit-animation-name: fadeInRightSlow !important;
-    animation-duration: 2.2s !important;
-    -webkit-animation-duration: 2.2s !important;
-    animation-delay: 0.4s !important;
-    -webkit-animation-delay: 0.4s !important;
-    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
-    -webkit-animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+    animation-duration: 2.8s !important;
+    -webkit-animation-duration: 2.8s !important;
+    animation-delay: 0.55s !important;
+    -webkit-animation-delay: 0.55s !important;
+    animation-timing-function: cubic-bezier(0.12, 0.9, 0.2, 1) !important;
+    -webkit-animation-timing-function: cubic-bezier(0.12, 0.9, 0.2, 1) !important;
     animation-fill-mode: both !important;
     will-change: transform, opacity;
 }
@@ -6384,7 +6383,7 @@ body {
 }
 
 /* ==========================================================================
-   OTHER SECTIONS: BALANCED REVEAL DELAYS
+   OTHER SECTIONS: BALANCED REVEAL DELAYS (SLOW & CLEAR)
    ========================================================================== */
 
 #HEADLINE5.ladi-animation > .ladi-headline,
@@ -6412,8 +6411,8 @@ body {
 #HEADLINE146.ladi-animation > .ladi-headline,
 #GROUP35.ladi-animation > .ladi-group,
 #GROUP36.ladi-animation > .ladi-group {
-    animation-delay: 0.35s !important;
-    -webkit-animation-delay: 0.35s !important;
+    animation-delay: 0.45s !important;
+    -webkit-animation-delay: 0.45s !important;
 }
 
 #HEADLINE4.ladi-animation > .ladi-headline,
@@ -6432,8 +6431,8 @@ body {
 #HEADLINE42.ladi-animation > .ladi-headline,
 #BOX27.ladi-animation > .ladi-box,
 #BOX28.ladi-animation > .ladi-box {
-    animation-delay: 0.18s !important;
-    -webkit-animation-delay: 0.18s !important;
+    animation-delay: 0.2s !important;
+    -webkit-animation-delay: 0.2s !important;
 }
 
 /* Backdrop popup styling */

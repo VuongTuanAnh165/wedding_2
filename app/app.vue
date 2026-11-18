@@ -1275,12 +1275,10 @@ const initAudio = () => {
     if (!isPlaying.value) safePlay()
     window.removeEventListener('touchstart', onFirstGesture)
     window.removeEventListener('click', onFirstGesture)
-    window.removeEventListener('scroll', onFirstGesture)
   }
 
   window.addEventListener('touchstart', onFirstGesture, { once: true, passive: true })
   window.addEventListener('click', onFirstGesture, { once: true })
-  window.addEventListener('scroll', onFirstGesture, { once: true, passive: true })
 }
 
 // 3. Live Countdown Timer (December 21, 2025 11:30)
@@ -1323,6 +1321,18 @@ const initScrollAnimations = () => {
     el.classList.add('ladi-animation')
   })
 
+  // Pre-decode secondary decorative assets so there is zero rasterization jank
+  const decoImages = [
+    'https://w.ladicdn.com/s450x450/6322a62f2dad980013bb5005/thiep-thanh-dat-element_0028_12-20251010160528-98e-4.png',
+    'https://w.ladicdn.com/s400x400/6322a62f2dad980013bb5005/thiep-thanh-dat-element_0030_hoa-lan-1-20251010160528-hwt_i.png',
+    'https://w.ladicdn.com/s450x700/6322a62f2dad980013bb5005/thiep-thanh-dat-element_0032_1-20251010160528-ebpkn.png',
+    'https://w.ladicdn.com/s450x650/6322a62f2dad980013bb5005/thiep-thanh-dat-element_0031_hoa-lan-20251010160528-rsw5l.png'
+  ]
+  decoImages.forEach(src => {
+    const img = new Image()
+    img.src = src
+  })
+
   // Dedicated trigger for Section 2 (envelope, card rise up, and photo fly in)
   let sec2Triggered = false
   const triggerSection2 = () => {
@@ -1342,16 +1352,9 @@ const initScrollAnimations = () => {
     }
   }
 
-  // Trigger Section 2 as soon as user scrolls down towards it
+  // Trigger Section 2 with zero layout thrashing on first scroll
   section2ScrollHandler = () => {
-    const sec2 = document.getElementById('SECTION2')
-    if (sec2) {
-      const rect = sec2.getBoundingClientRect()
-      // If user has scrolled or Section 2 top is comfortably within view
-      if (window.scrollY > 40 || rect.top < window.innerHeight * 0.65) {
-        triggerSection2()
-      }
-    } else if (window.scrollY > 40) {
+    if (window.scrollY > 15) {
       triggerSection2()
     }
   }
@@ -1362,14 +1365,14 @@ const initScrollAnimations = () => {
     if (sec2) {
       section2Observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting && (window.scrollY > 40 || entry.boundingClientRect.top < window.innerHeight * 0.65)) {
+          if (entry.isIntersecting && window.scrollY > 15) {
             triggerSection2()
           }
         })
       }, {
         root: null,
-        rootMargin: '0px 0px -100px 0px',
-        threshold: 0.1
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.05
       })
       section2Observer.observe(sec2)
     }
@@ -1410,7 +1413,7 @@ const initScrollAnimations = () => {
   }
 
   // Check immediately if page was reloaded already scrolled down
-  if (window.scrollY > 40) {
+  if (window.scrollY > 15) {
     triggerSection2()
   }
 }
