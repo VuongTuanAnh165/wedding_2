@@ -3,7 +3,7 @@
     <div class="invitation-container reveal-fade-up">
       <!-- Intro Tagline -->
       <p class="invite-lead font-serif">You’re invited to the wedding of</p>
-      
+
       <!-- Couple Names with Calligraphy & -->
       <div class="names-banner">
         <h2 class="name bride-name font-display">{{ brideName }}</h2>
@@ -17,7 +17,7 @@
       </div>
 
       <!-- Countdown Heading & Component -->
-      <p class="countdown-intro font-serif">is happening in</p>
+      <p class="countdown-intro font-serif">NGÀY TRỌNG ĐẠI SẼ DIỄN RA SAU</p>
       <CountdownTimer :target-date="eventDate" />
     </div>
   </section>

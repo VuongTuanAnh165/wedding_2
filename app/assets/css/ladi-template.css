@@ -3803,18 +3803,22 @@
         }
 
         #IMAGE27,
+        #IMAGE27>.ladi-image,
         #IMAGE27>.ladi-image>.ladi-image-background {
-            width: 104.488px;
-            height: 54.6995px;
+            width: 75px;
+            height: 65px;
         }
 
         #IMAGE27 {
-            top: 66.614px;
-            left: 165.336px;
+            top: 58px;
+            left: 172.5px;
         }
 
         #IMAGE27>.ladi-image>.ladi-image-background {
-            background-image: url("https://w.ladicdn.com/s450x400/6322a62f2dad980013bb5005/_0007_19-20251020191638-sazlq.png");
+            background-image: url("/logo.webp");
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
         }
 
         #IMAGE27.ladi-animation>.ladi-image {

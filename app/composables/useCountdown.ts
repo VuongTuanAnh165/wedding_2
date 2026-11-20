@@ -1,6 +1,6 @@
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, watch, toValue, onMounted, onUnmounted, type MaybeRefOrGetter } from 'vue'
 
-export function useCountdown(targetDateStr: string) {
+export function useCountdown(targetDate: MaybeRefOrGetter<string>) {
   const days = ref('00')
   const hours = ref('00')
   const minutes = ref('00')
@@ -10,6 +10,7 @@ export function useCountdown(targetDateStr: string) {
   let timerId: any = null
 
   const calculate = () => {
+    const targetDateStr = toValue(targetDate)
     const target = new Date(targetDateStr).getTime()
     const now = Date.now()
     const diff = target - now
@@ -20,10 +21,10 @@ export function useCountdown(targetDateStr: string) {
       minutes.value = '00'
       seconds.value = '00'
       isFinished.value = true
-      if (timerId) clearInterval(timerId)
       return
     }
 
+    isFinished.value = false
     const d = Math.floor(diff / (1000 * 60 * 60 * 24))
     const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
     const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
@@ -38,6 +39,10 @@ export function useCountdown(targetDateStr: string) {
   onMounted(() => {
     calculate()
     timerId = setInterval(calculate, 1000)
+  })
+
+  watch(() => toValue(targetDate), () => {
+    calculate()
   })
 
   onUnmounted(() => {

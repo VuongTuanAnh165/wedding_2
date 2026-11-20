@@ -2,7 +2,7 @@
   <section class="timeline-section plaster-texture">
     <!-- Section Title -->
     <div class="section-heading reveal-fade-up">
-      <h3 class="heading-title font-display">Timeline</h3>
+      <h3 class="heading-title font-display">Lịch trình buổi tiệc</h3>
       <div class="gold-divider">
         <span class="diamond-dot">◆</span>
       </div>
@@ -27,11 +27,7 @@
       <p class="dress-code-desc font-serif">{{ dressCode.description }}</p>
 
       <div class="color-swatches">
-        <div 
-          v-for="(color, idx) in dressCode.colors" 
-          :key="idx" 
-          class="swatch-item"
-        >
+        <div v-for="(color, idx) in dressCode.colors" :key="idx" class="swatch-item">
           <div class="swatch-circle" :style="{ backgroundColor: color.hex }"></div>
           <span class="swatch-name">{{ color.name }}</span>
         </div>

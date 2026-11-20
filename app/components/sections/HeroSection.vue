@@ -1,8 +1,8 @@
 <template>
   <section class="hero-section plaster-texture">
-    <!-- Top Save The Date Header -->
+    <!-- Top NGÀY CHUNG ĐÔI Header -->
     <div class="hero-header reveal-fade-up">
-      <p class="script-subtitle font-script">save the date</p>
+      <p class="script-subtitle font-script">NGÀY CHUNG ĐÔI</p>
       <h1 class="couple-title font-display">Thành & Trang</h1>
       <p class="save-date-tag font-serif">{{ eventDate }}</p>
     </div>
@@ -11,21 +11,14 @@
     <div class="hero-portrait-card reveal-scale delay-200">
       <div class="polaroid-wrapper">
         <div class="photo-frame">
-          <img 
-            :src="coverImage" 
-            alt="Xuân Thành & Thu Trang Wedding" 
-            class="couple-img"
-            loading="eager"
-          />
+          <img :src="coverImage" alt="Xuân Thành & Thu Trang Wedding" class="couple-img" loading="eager" />
         </div>
-        
+
         <!-- Ribbon / Bow Tie Decoration -->
         <div class="ribbon-ornament">
-          <img 
-            src="https://w.ladicdn.com/s650x650/6322a62f2dad980013bb5005/thiep-thanh-dat-element_0025_9-20251010160529-oa95t.png" 
-            alt="Wedding bow" 
-            class="ribbon-img animate-float"
-          />
+          <img
+            src="https://w.ladicdn.com/s650x650/6322a62f2dad980013bb5005/thiep-thanh-dat-element_0025_9-20251010160529-oa95t.png"
+            alt="Wedding bow" class="ribbon-img animate-float" />
         </div>
       </div>
     </div>
