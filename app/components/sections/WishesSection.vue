@@ -3,9 +3,9 @@
     <div class="wishes-container reveal-fade-up">
       <!-- Section Title -->
       <div class="wishes-header">
-        <h3 class="wishes-title font-display">YOUR WISHES</h3>
+        <h3 class="wishes-title font-display">LỜI CHÚC</h3>
         <div class="gold-line-mini"></div>
-        <p class="wishes-sub font-serif">Messages from our loved ones</p>
+        <p class="wishes-sub font-serif">Những lời nhắn từ người thân thương</p>
       </div>
 
       <!-- Loading State -->

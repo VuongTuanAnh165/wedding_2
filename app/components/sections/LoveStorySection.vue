@@ -47,7 +47,7 @@
     <div class="polaroid-duo reveal-fade-up delay-300">
       <div class="polaroid-item polaroid-left">
         <img 
-          src="https://w.ladicdn.com/s550x550/6322a62f2dad980013bb5005/571765088_1401349365330793_1662366587190655600_n-1-20251030042127-nm_mv.jpg" 
+          src="/images/6.webp" 
           alt="Happy Moments" 
           class="polaroid-img" 
           loading="lazy"
@@ -55,7 +55,7 @@
       </div>
       <div class="polaroid-item polaroid-right">
         <img 
-          src="https://w.ladicdn.com/s750x650/6322a62f2dad980013bb5005/572524211_1401350018664061_6624378457772842585_n-20251030041304-s8aeq.jpg" 
+          src="/images/3.webp" 
           alt="Wedding Romance" 
           class="polaroid-img" 
           loading="lazy"

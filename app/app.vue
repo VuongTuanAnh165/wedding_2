@@ -490,14 +490,7 @@
                         </div>
                     </div>
                     <div id="HEADLINE41" class="ladi-element ladi-animation-hidden">
-                        <p class="ladi-headline ladi-transition">Tình yêu của anh và em là một hành trình kỳ diệu, vượt
-                            qua
-                            bao thử thách để cùng nhau bước đến ngày trọng đại <br>– đám cưới của chúng mình.<br>Đám
-                            cưới
-                            này là lời cam kết chân thành, là sự bắt đầu của một chương mới – nơi chúng ta cùng vun đắp
-                            tổ
-                            ấm, cùng sẻ chia mọi vui buồn và cùng nắm tay nhau đi đến cuối con đường mang tên hạnh
-                            phúc.<br>
+                        <p class="ladi-headline ladi-transition">Từ hai người xa lạ, chúng mình dần trở thành một nửa của nhau qua những điều giản dị mỗi ngày. Giờ đây, khi hành trình mới sắp bắt đầu, chúng mình muốn có những người thân thương ở bên để cùng chia sẻ niềm vui này.<br>
                         </p>
                     </div>
                     <div id="IMAGE28" class="ladi-element">
@@ -513,7 +506,7 @@
                     <div id="HEADLINE42" class="ladi-element ladi-animation-hidden">
                         <p class="ladi-headline ladi-transition">Hôm nay là ngày chúng mình cùng nắm tay<br>&nbsp;bước
                             vào
-                            hành trình mới
+                            hành trình mới - 
                             hành trình<br>của yêu thương và sẻ chia.
                             <br>
                         </p>
@@ -530,33 +523,6 @@
                             </div>
                             <div id="GROUP37" class="ladi-element">
                                 <div class="ladi-group">
-                                    <div id="HEADLINE82" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">1<br></p>
-                                    </div>
-                                    <div id="HEADLINE83" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">3<br></p>
-                                    </div>
-                                    <div id="HEADLINE84" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">6<br></p>
-                                    </div>
-                                    <div id="HEADLINE85" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">7<br></p>
-                                    </div>
-                                    <div id="HEADLINE86" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">8<br></p>
-                                    </div>
-                                    <div id="HEADLINE87" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">10<br></p>
-                                    </div>
-                                    <div id="HEADLINE88" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">13<br></p>
-                                    </div>
-                                    <div id="HEADLINE89" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">14<br></p>
-                                    </div>
-                                    <div id="HEADLINE90" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">15<br></p>
-                                    </div>
                                     <div id="GROUP69" class="ladi-element">
                                         <div class="ladi-group">
                                             <div id="HEADLINE91" class="ladi-element">
@@ -582,70 +548,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="HEADLINE98" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">24<br></p>
+
+                                    <!-- Lịch chuẩn Tháng 12/2026 (December 2026: 31 ngày, ngày 1 vào Thứ Ba) -->
+                                    <div v-for="item in calendarDays2026" :key="item.day"
+                                        class="ladi-element calendar-day-number"
+                                        :class="{ 'is-highlighted': item.day === highlightedWeddingDay }"
+                                        :style="{ top: `${item.top}px`, left: `${item.left}px` }">
+                                        <p class="ladi-headline ladi-transition">{{ item.day }}<br></p>
                                     </div>
-                                    <div id="HEADLINE99" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">25<br></p>
-                                    </div>
-                                    <div id="HEADLINE100" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">26<br></p>
-                                    </div>
-                                    <div id="HEADLINE101" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">27<br></p>
-                                    </div>
-                                    <div id="HEADLINE102" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">28<br></p>
-                                    </div>
-                                    <div id="HEADLINE103" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">29<br></p>
-                                    </div>
-                                    <div id="HEADLINE104" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">30<br></p>
-                                    </div>
-                                    <div id="HEADLINE105" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">17<br></p>
-                                    </div>
-                                    <div id="HEADLINE106" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">18<br></p>
-                                    </div>
-                                    <div id="HEADLINE107" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">19<br></p>
-                                    </div>
-                                    <div id="HEADLINE108" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">20<br></p>
-                                    </div>
-                                    <div id="HEADLINE109" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">21<br></p>
-                                    </div>
-                                    <div id="HEADLINE110" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">22<br></p>
-                                    </div>
-                                    <div id="HEADLINE111" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">23<br></p>
-                                    </div>
-                                    <div id="HEADLINE112" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">16<br></p>
-                                    </div>
-                                    <div id="HEADLINE113" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">9<br></p>
-                                    </div>
-                                    <div id="HEADLINE114" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">11<br></p>
-                                    </div>
-                                    <div id="HEADLINE115" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">12<br></p>
-                                    </div>
-                                    <div id="HEADLINE116" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">4<br></p>
-                                    </div>
-                                    <div id="HEADLINE117" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">2<br></p>
-                                    </div>
-                                    <div id="HEADLINE118" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">5<br></p>
-                                    </div>
-                                    <div id="IMAGE33" class="ladi-element ladi-animation-hidden">
+
+                                    <!-- Trái tim khoanh ngày cưới: Nhà trai (27/12/2026), Nhà gái (26/12/2026) -->
+                                    <div id="IMAGE33" class="ladi-element ladi-animation" :style="heartStyle">
                                         <div class="ladi-image">
                                             <div class="ladi-image-background"></div>
                                         </div>
@@ -708,23 +621,16 @@
                             <div id="BOX14" class="ladi-element">
                                 <div class="ladi-box ladi-transition"></div>
                             </div>
-                            <div id="HEADLINE119" class="ladi-element ladi-animation-hidden">
-                                <p class="ladi-headline ladi-transition">Our wedding album captures the
-                                    gentle glow of love — moments of
-                                    laughter, tenderness, and forever
-                                    promises, wrapped in a dreamy
-                                    elegance that will never fade.<br></p>
-                            </div>
                             <div id="GROUP31" class="ladi-element ladi-animation-hidden">
                                 <div class="ladi-group">
                                     <div id="HEADLINE140" class="ladi-element">
-                                        <p class="ladi-headline">golden hour<br></p>
-                                    </div>
-                                    <div id="HEADLINE141" class="ladi-element">
-                                        <p class="ladi-headline">love<br></p>
+                                        <p class="ladi-headline">KHOẢNH KHẮC<br></p>
                                     </div>
                                     <div id="HEADLINE142" class="ladi-element">
-                                        <p class="ladi-headline">of</p>
+                                        <p class="ladi-headline">của</p>
+                                    </div>
+                                    <div id="HEADLINE141" class="ladi-element">
+                                        <p class="ladi-headline">YÊU THƯƠNG<br></p>
                                     </div>
                                 </div>
                             </div>
@@ -781,12 +687,16 @@
                         <div class="ladi-group">
                             <div id="FORM2" is_auto_funnel="" data-config-id="68fefd387d9c4b005c27bfff"
                                 class="ladi-element ladi-animation-hidden">
-                                <form autocomplete="off" method="post" class="ladi-form">
-                                    <div id="BUTTON2" class="ladi-element ladi-animation-hidden">
-                                        <div class="ladi-button ladi-transition">
+                                <form autocomplete="off" method="post" class="ladi-form" @submit.prevent="submitWishForm">
+                                    <div id="BUTTON2" class="ladi-element ladi-animation-hidden" role="button" tabindex="0" @click.stop="submitWishForm">
+                                        <div class="ladi-button ladi-transition"
+                                            :class="{ 'is-loading': isSubmittingWish }"
+                                            @click.stop="submitWishForm" @keydown.enter.stop="submitWishForm">
                                             <div class="ladi-button-background"></div>
-                                            <div id="BUTTON_TEXT2" class="ladi-element ladi-button-headline">
-                                                <p class="ladi-headline ladi-transition">GỬI LỜI NHẮN &amp; xác nhận</p>
+                                            <div id="BUTTON_TEXT2" class="ladi-element ladi-button-headline" @click.stop="submitWishForm">
+                                                <p class="ladi-headline ladi-transition">
+                                                    {{ isSubmittingWish ? 'ĐANG GỬI...' : 'GỬI LỜI NHẮN & xác nhận' }}
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -794,23 +704,23 @@
                                         <div class="ladi-form-item-container">
                                             <div class="ladi-form-item-background"></div>
                                             <div class="ladi-form-item"><input autocomplete="off" tabindex="1"
-                                                    name="name" required="" class="ladi-form-control" type="text"
-                                                    placeholder="Tên của bạn" value=""></div>
+                                                    ref="nameInputRef" name="name" required="" class="ladi-form-control" type="text"
+                                                    placeholder="Tên của bạn" v-model="wishForm.name"></div>
                                         </div>
                                     </div>
                                     <div id="FORM_ITEM3" class="ladi-element">
                                         <div class="ladi-form-item-container">
                                             <div class="ladi-form-item-background"></div>
-                                            <div class="ladi-form-item"><textarea autocomplete="off" tabindex="4"
-                                                    name="message" required="" class="ladi-form-control"
-                                                    placeholder="Gửi lời nhắn đến cô dâu chú rể"></textarea></div>
+                                            <div class="ladi-form-item"><textarea autocomplete="off" tabindex="2"
+                                                    ref="messageInputRef" name="message" required="" class="ladi-form-control"
+                                                    placeholder="Gửi lời nhắn đến cô dâu chú rể" v-model="wishForm.message"></textarea></div>
                                         </div>
                                     </div>
                                     <div id="FORM_ITEM4" class="ladi-element">
                                         <div class="ladi-form-item-container">
                                             <div class="ladi-form-item-background"></div>
                                             <div class="ladi-form-item"><select tabindex="3" name="form_item7"
-                                                    class="ladi-form-control ladi-form-control-select" data-selected="">
+                                                    class="ladi-form-control ladi-form-control-select" v-model="wishForm.attending">
                                                     <option value="">Bạn sẽ đến chứ?</option>
                                                     <option value="Mình chắc chắn sẽ đến">Mình chắc chắn sẽ đến</option>
                                                     <option value="Xin lỗi mình bận rồi!">Xin lỗi mình bận rồi!</option>
@@ -821,7 +731,7 @@
                                         <div class="ladi-form-item-container">
                                             <div class="ladi-form-item-background"></div>
                                             <div class="ladi-form-item"><select tabindex="4" name="form_item8"
-                                                    class="ladi-form-control ladi-form-control-select" data-selected="">
+                                                    class="ladi-form-control ladi-form-control-select" v-model="wishForm.guestCount">
                                                     <option value="">Bạn tham dự cùng ai?</option>
                                                     <option value="1 người">1 người</option>
                                                     <option value="2 người">2 người</option>
@@ -834,22 +744,14 @@
                                         <div class="ladi-form-item-container">
                                             <div class="ladi-form-item-background"></div>
                                             <div class="ladi-form-item"><select tabindex="5" name="form_item9"
-                                                    class="ladi-form-control ladi-form-control-select" data-selected="">
+                                                    class="ladi-form-control ladi-form-control-select" v-model="wishForm.side">
                                                     <option value="">Bạn là khách mời của ai?</option>
                                                     <option value="Khách mời cô dâu">Khách mời cô dâu</option>
                                                     <option value="Khách mời chú rể">Khách mời chú rể</option>
                                                 </select></div>
                                         </div>
-                                    </div><button type="submit" class="ladi-hidden"></button>
+                                    </div><button type="submit" class="ladi-hidden" :disabled="isSubmittingWish"></button>
                                 </form>
-                            </div>
-                            <div data-action="true" id="BUTTON3" class="ladi-element ladi-animation-hidden">
-                                <div class="ladi-button">
-                                    <div class="ladi-button-background"></div>
-                                    <div id="BUTTON_TEXT3" class="ladi-element ladi-button-headline">
-                                        <p class="ladi-headline ladi-transition">GỬI QUÀ MỪNG CƯỚI&nbsp;</p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -875,153 +777,68 @@
                                 <!-- TIÊU ĐỀ -->
 
                                 <div class="jmii-title">
-                                    YOUR WISHES
+                                    LỜI CHÚC
                                 </div>
 
                                 <div class="jmii-line"></div>
 
                                 <div class="jmii-caption">
-                                    Messages from our loved ones
+                                    Những lời nhắn từ người thân thương
                                 </div>
 
 
-                                <!-- KHUNG CUỘN -->
+                                <!-- KHUNG CUỘN LỜI CHÚC TỰ ĐỘNG CẬP NHẬT TỪ FILE JSON -->
 
                                 <div id="jmii-scroll">
 
-                                    <div id="jmii-list">
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Ngô Ny</div>
-                                            <div class="jmii-message">Chúc mừng hạnh phúc ac</div>
+                                    <!-- TRẠNG THÁI ĐANG TẢI -->
+                                    <div v-if="isLoadingWishes" class="jmii-loading-box">
+                                        <span class="loading-spin-heart">💌</span>
+                                        <div class="loading-text">Đang tải những lời chúc yêu thương...</div>
+                                    </div>
+
+                                    <!-- TRẠNG THÁI CHƯA CÓ LỜI CHÚC NÀO (EMPTY STATE) -->
+                                    <div v-else-if="wishes.length === 0" class="jmii-empty-container">
+                                        <div class="empty-icon-box">
+                                            <span class="empty-main-icon">💌</span>
+                                            <span class="empty-sparkle sp-1">✨</span>
+                                            <span class="empty-sparkle sp-2">🌸</span>
                                         </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Thu A2</div>
-                                            <div class="jmii-message">Mong chờ gặp cô dâu chú rễ dễ thương
-                                                Cô dâu nhớ lời hứa với bé nha: bận làm cô dâu nhưng cũng đừng quên nghía
-                                                thêm ngưu ma vương sơ mi trắng cho bé T 😆</div>
+                                        <div class="empty-title">Hãy là người đầu tiên gửi gắm yêu thương!</div>
+                                        <div class="empty-desc">
+                                            Hòm thư của cô dâu &amp; chú rể đang mong chờ những lời chúc ngọt ngào từ bạn. Hãy là người mở đầu cho cuốn sổ lưu bút ý nghĩa này nhé! 💕
                                         </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Quyen Liu</div>
-                                            <div class="jmii-message">Congrats bé Quỳnh &amp; anh Vũ.</div>
+                                        <button type="button" class="empty-action-btn" @click="focusWishForm">
+                                            <span class="btn-pen">✍️</span> Gửi lời chúc ngay
+                                        </button>
+                                        <div class="empty-quick-wishes">
+                                            <div class="quick-chip-label">✨ Gợi ý lời chúc nhanh:</div>
+                                            <button type="button" class="quick-chip" @click="pickQuickWish('Chúc hai bạn trăm năm hạnh phúc, đầu bạc răng long! 💍')">
+                                                "Trăm năm hạnh phúc! 💍"
+                                            </button>
+                                            <button type="button" class="quick-chip" @click="pickQuickWish('Chúc tân lang tân nương mãi ngọt ngào và hạnh phúc viên mãn! ❤️')">
+                                                "Mãi ngọt ngào như ngày đầu! ❤️"
+                                            </button>
+                                            <button type="button" class="quick-chip" @click="pickQuickWish('Mừng ngày chung đôi! Chúc hai bạn cùng nhau xây tổ ấm thật rực rỡ! 🥂')">
+                                                "Mừng ngày chung đôi! 🥂"
+                                            </button>
                                         </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Anh Lak</div>
-                                            <div class="jmii-message">Chúc bé Quỳnh luôn xinh đẹp và hạnh phúc nha</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Nguyen Hien</div>
-                                            <div class="jmii-message">Chúc mừng bạn tui thoát ế</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Johan</div>
-                                            <div class="jmii-message">May your marriage be filled with joy, laughter and
-                                                endless love. Wishing you a beautiful wedding day and a wonderful life
-                                                together</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">nana</div>
-                                            <div class="jmii-message">Congratulations my queen 👸</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Nhung Le</div>
-                                            <div class="jmii-message">See you there!</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Quỳnh Lan</div>
-                                            <div class="jmii-message">em sẵn sàng rồi nha🤩</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Aung Lay</div>
-                                            <div class="jmii-message">Congratulations Our Q 🥰🥰🥰</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Phan Thị Đài Trang</div>
-                                            <div class="jmii-message">Chúc vc Chị mãi yêu thương nhường nhịn nhau suốt
-                                                đời
+                                    </div>
+
+                                    <!-- DANH SÁCH LỜI CHÚC THẬT TỪ DATA JSON -->
+                                    <div v-else id="jmii-list">
+                                        <div v-for="item in wishes" :key="item.id" class="jmii-wish animate-wish">
+                                            <div class="jmii-wish-header">
+                                                <div class="jmii-name">{{ item.name }}</div>
+                                                <span v-if="item.side" class="jmii-side-badge" :class="item.side.includes('chú rể') ? 'groom-badge' : 'bride-badge'">
+                                                    {{ item.side.includes('chú rể') ? 'Nhà trai' : 'Nhà gái' }}
+                                                </span>
+                                                <span v-if="item.attending && item.attending.includes('sẽ đến')" class="jmii-attend-badge">
+                                                    ✓ Tham dự
+                                                </span>
+                                                <span class="jmii-time">{{ formatWishTime(item.createdAt) }}</span>
                                             </div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Tuấn (Alton)</div>
-                                            <div class="jmii-message">Chúc mừng Quỳnh nha, mãi iu</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Chị Hạnh</div>
-                                            <div class="jmii-message">Chúc mừng hạnh phúc hai bạn! Chúc bạn bước vào
-                                                hành
-                                                trình mới với thật nhiều yêu thương, bình an và hạnh phúc. Mong rằng tổ
-                                                ấm
-                                                của hai bạn sẽ luôn tràn ngập tiếng cười, đồng hành cùng nhau vượt qua
-                                                mọi
-                                                thử thách và nắm tay nhau đến bạc đầu</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Phú</div>
-                                            <div class="jmii-message">Chúc hai anh chị mãi mãi yêu thương, đồng hành và
-                                                cùng
-                                                nhau viết nên một cuộc sống hôn nhân viên mãn. Trăm năm hạnh phúc!</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Sahmear Alajmi</div>
-                                            <div class="jmii-message">Congratulations! I’m excited for you two and
-                                                honored
-                                                to attend.</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Trịnh Minh Giàu</div>
-                                            <div class="jmii-message">Chúc chị Quỳnh hạnh phúc bên gia đình mới và sớm
-                                                có
-                                                thêm nhiều thành viên mới nhen 🤭🤭</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Hải Yến</div>
-                                            <div class="jmii-message">Chúc cô dâu chú rễ trăm năm hạnh phúc 😊</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Anh Ngàn</div>
-                                            <div class="jmii-message">Best wishes on your special day and for a
-                                                wonderful
-                                                life together</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Juliaaa</div>
-                                            <div class="jmii-message">Good thing takes time ~ cuối cùng thì chị đã tìm
-                                                được
-                                                bến đỗ của mình. Happy wedding chị iu, hạnh phúc nha 🫶🫶🫶🫶</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Nguyễn thị thuý hằng</div>
-                                            <div class="jmii-message">Chúc 2 bạn mãi hạnh phúc</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Huỳnh Giao</div>
-                                            <div class="jmii-message">Bé iu ơi, e đang hóng tới ngày bé mặc váy cưới lắm
-                                                lắm
-                                            </div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Dương Thư</div>
-                                            <div class="jmii-message">Nôn nao lắm lắm, mong đến ngày được nhìn thấy Chị
-                                                Quỳnh măc váy cưới. Chúc chị luôn hạnh phúc, vui vẻ. Em còn nhiều điều
-                                                muốn
-                                                nói lắm. Nhưng tận đáy lòng, mong chị luôn hạnh phúc. 🥰🥰🥰🥰</div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">bé híu xinh gái 😚</div>
-                                            <div class="jmii-message">nhất định sẽ có mặt trong ngày trọng đại này 😚
-                                            </div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Tilun</div>
-                                            <div class="jmii-message">Em chúc chị bé Quỳnh sẽ có 1 cuộc sống viên mãn
-                                                bên 1
-                                                nửa của mình . Tụi em sẽ quẩy nhiệt tình chung vui cùng cô dâu chú rể
-                                                nha .
-                                            </div>
-                                        </div>
-                                        <div class="jmii-wish">
-                                            <div class="jmii-name">Huỳnh Vân</div>
-                                            <div class="jmii-message">Không những trăm năm mà ngàn năm hạnh phúc nha Mèo
-                                            </div>
+                                            <div class="jmii-message">{{ item.message }}</div>
                                         </div>
                                     </div>
 
@@ -1058,129 +875,11 @@
                             </div>
                         </div>
                     </div>
-                    <div data-action="true" id="GROUP78" class="ladi-element">
-                        <div class="ladi-group">
-                            <div id="HEADLINE163" class="ladi-element ladi-animation-hidden">
-                                <h3 class="ladi-headline ladi-transition">JMII Wedding Invitation</h3>
-                            </div><a href="https://www.facebook.com/profile.php?id=61557384251600" target="_blank"
-                                id="IMAGE75" class="ladi-element"
-                                data-replace-href="https://www.facebook.com/profile.php?id=61557384251600">
-                                <div class="ladi-image ladi-transition">
-                                    <div class="ladi-image-background"></div>
-                                </div>
-                            </a><a href="https://www.tiktok.com/@thiepcuoi.online?is_from_webapp=1&amp;sender_device=pc"
-                                target="_blank" id="IMAGE76" class="ladi-element"
-                                data-replace-href="https://www.tiktok.com/@thiepcuoi.online?is_from_webapp=1&amp;sender_device=pc">
-                                <div class="ladi-image ladi-transition">
-                                    <div class="ladi-image-background"></div>
-                                </div>
-                            </a><a href="https://zalo.me/0968378902" target="_blank" id="IMAGE77" class="ladi-element"
-                                data-replace-href="https://zalo.me/0968378902">
-                                <div class="ladi-image ladi-transition">
-                                    <div class="ladi-image-background"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div id="SECTION_POPUP" class="ladi-section">
                 <div class="ladi-section-background"></div>
                 <div class="ladi-container">
-                    <div id="POPUP1" class="ladi-element">
-                        <div class="ladi-popup">
-                            <div class="ladi-popup-background"></div>
-                            <div id="IMAGE36" class="ladi-element">
-                                <div class="ladi-image ladi-transition">
-                                    <div class="ladi-image-background"></div>
-                                </div>
-                            </div>
-                            <div id="GROUP72" class="ladi-element">
-                                <div class="ladi-group">
-                                    <div id="PARAGRAPH1" class="ladi-element">
-                                        <div class="ladi-paragraph ladi-transition">Cảm ơn bạn đã dành thời gian phản
-                                            hồi.
-                                            <br>Chúng mình vô cùng trân quý sự quan tâm của bạn.<br>
-                                        </div>
-                                    </div>
-                                    <div id="HEADLINE131" class="ladi-element">
-                                        <h3 class="ladi-headline ladi-transition">Thank you!<br></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="LINE6" class="ladi-element">
-                                <div class="ladi-line">
-                                    <div class="ladi-line-container"></div>
-                                </div>
-                            </div>
-                            <div id="PARAGRAPH2" class="ladi-element">
-                                <div class="ladi-paragraph ladi-transition">21<br>12<br></div>
-                            </div>
-                            <div id="GROUP21" class="ladi-element ladi-animation-hidden">
-                                <div class="ladi-group">
-                                    <div id="IMAGE38" class="ladi-element">
-                                        <div class="ladi-image ladi-transition">
-                                            <div class="ladi-image-background"></div>
-                                        </div>
-                                    </div>
-                                    <div id="BOX23" class="ladi-element">
-                                        <div class="ladi-box ladi-transition"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="IMAGE40" class="ladi-element">
-                                <div class="ladi-image">
-                                    <div class="ladi-image-background"></div>
-                                </div>
-                            </div>
-                            <div id="IMAGE49" class="ladi-element">
-                                <div class="ladi-image">
-                                    <div class="ladi-image-background"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="POPUP2" class="ladi-element">
-                        <div class="ladi-popup">
-                            <div class="ladi-popup-background"></div>
-                            <div id="GROUP52" class="ladi-element">
-                                <div class="ladi-group">
-                                    <div id="IMAGE42" class="ladi-element">
-                                        <div class="ladi-image ladi-transition">
-                                            <div class="ladi-image-background"></div>
-                                        </div>
-                                    </div>
-                                    <div id="HEADLINE132" class="ladi-element">
-                                        <h3 class="ladi-headline ladi-transition">{{ currentSideConfig.banking.title }}
-                                        </h3>
-                                    </div>
-                                    <div id="HEADLINE133" class="ladi-element">
-                                        <h3 class="ladi-headline ladi-transition">{{
-                                            currentSideConfig.banking.accountHolder }}</h3>
-                                    </div>
-                                    <div id="HEADLINE134" class="ladi-element">
-                                        <h3 class="ladi-headline ladi-transition">{{ currentSideConfig.banking.bankName
-                                            }}<br>{{ currentSideConfig.banking.accountNumber }}</h3>
-                                    </div>
-                                    <div id="LINE7" class="ladi-element">
-                                        <div class="ladi-line">
-                                            <div class="ladi-line-container"></div>
-                                        </div>
-                                    </div>
-                                    <div id="IMAGE43" class="ladi-element">
-                                        <div class="ladi-image ladi-transition">
-                                            <div class="ladi-image-background"
-                                                :style="currentSideConfig.banking.qrImage ? { backgroundImage: `url('${currentSideConfig.banking.qrImage}')` } : {}">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="BOX24" class="ladi-element">
-                                        <div class="ladi-box ladi-transition"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div id="POPUP3" class="ladi-element">
                         <div class="ladi-popup">
                             <div class="ladi-popup-background"></div>
@@ -1235,7 +934,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
+import { ref, reactive, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter, useHead } from '#imports'
 import { weddingShared, weddingSides, resolveWeddingSide, formatInvitationLead, type WeddingSide } from '~/data/wedding.config'
 
@@ -1260,6 +959,71 @@ const switchSide = (side: WeddingSide) => {
         }
     })
 }
+
+// Lịch Tháng 12/2026 (December 2026: 31 ngày, ngày 1 bắt đầu vào Thứ Ba)
+const calendarDays2026 = [
+    // Hàng 1 (top: 40.5px / 40.73px)
+    { day: 1, top: 40.5, left: 57.95 },
+    { day: 2, top: 40.5, left: 105.95 },
+    { day: 3, top: 40.5, left: 153.52 },
+    { day: 4, top: 40.5, left: 201.09 },
+    { day: 5, top: 40.73, left: 254.24 },
+    { day: 6, top: 40.73, left: 301.81 },
+
+    // Hàng 2 (top: 76.05px ~ 76.28px)
+    { day: 7, top: 76.05, left: 10.38 },
+    { day: 8, top: 76.05, left: 57.95 },
+    { day: 9, top: 76.14, left: 105.95 },
+    { day: 10, top: 76.14, left: 153.52 },
+    { day: 11, top: 76.14, left: 201.09 },
+    { day: 12, top: 76.28, left: 254.24 },
+    { day: 13, top: 76.28, left: 301.81 },
+
+    // Hàng 3 (top: 111.61px ~ 111.84px)
+    { day: 14, top: 111.61, left: 10.38 },
+    { day: 15, top: 111.61, left: 57.95 },
+    { day: 16, top: 111.77, left: 105.95 },
+    { day: 17, top: 111.77, left: 153.52 },
+    { day: 18, top: 111.77, left: 201.09 },
+    { day: 19, top: 111.84, left: 254.24 },
+    { day: 20, top: 111.84, left: 301.81 },
+
+    // Hàng 4 (top: 147.4px)
+    { day: 21, top: 147.4, left: 10.38 },
+    { day: 22, top: 147.4, left: 57.95 },
+    { day: 23, top: 147.4, left: 105.95 },
+    { day: 24, top: 147.4, left: 153.52 },
+    { day: 25, top: 147.4, left: 201.09 },
+    { day: 26, top: 147.4, left: 254.24 }, // SAT - Nhà gái (26/12/2026)
+    { day: 27, top: 147.4, left: 301.81 }, // SUN - Nhà trai (27/12/2026)
+
+    // Hàng 5 (top: 182.72px)
+    { day: 28, top: 182.72, left: 10.38 },
+    { day: 29, top: 182.72, left: 57.95 },
+    { day: 30, top: 182.72, left: 105.95 },
+    { day: 31, top: 182.72, left: 153.52 }
+]
+
+// Ngày cưới cần khoanh: Nhà gái -> 26, Nhà trai -> 27
+const highlightedWeddingDay = computed(() => {
+    return currentSide.value === 'gai' ? 26 : 27
+})
+
+// Tọa độ định vị trái tim (#IMAGE33) quanh đúng ngày cưới theo từng bên:
+// - Nhà gái: 26/12/2026 (Thứ Bảy, Cột 6 - SAT) -> top: 142.82px, left: 249.25px
+// - Nhà trai: 27/12/2026 (Chủ Nhật, Cột 7 - SUN) -> top: 142.82px, left: 296.793px
+const heartStyle = computed(() => {
+    if (currentSide.value === 'gai') {
+        return {
+            top: '142.82px',
+            left: '249.25px'
+        }
+    }
+    return {
+        top: '142.82px',
+        left: '296.793px'
+    }
+})
 
 // 2. Tên khách mời từ param URL (?to=, ?guest=, ?name=, ?khach=, ?k=, ?u=)
 // Ví dụ: ?to=Anh Hoàng -> TRÂN TRỌNG KÍNH MỜI ANH HOÀNG ĐẾN DỰ LỄ ĂN HỎI CỦA
@@ -1562,17 +1326,187 @@ const initScrollAnimations = () => {
     }
 }
 
-// 5. Popups, Actions & Wishes
+// 5. Quản lý Lời chúc (RSVP Wishes) lưu trữ vào file data/wishes.json
+export interface WishItem {
+    id: string
+    name: string
+    message: string
+    attending?: string
+    guestCount?: string
+    side?: string
+    createdAt: string
+}
+
+const nameInputRef = ref<HTMLInputElement | null>(null)
+const messageInputRef = ref<HTMLTextAreaElement | null>(null)
+const isSubmittingWish = ref(false)
+const isLoadingWishes = ref(true)
+const wishes = ref<WishItem[]>([])
+
+const wishForm = reactive({
+    name: '',
+    message: '',
+    attending: '',
+    guestCount: '',
+    side: ''
+})
+
+// Tự động điền tên khách mời từ URL nếu có
+watch(guestName, (newVal) => {
+    if (newVal && !wishForm.name) {
+        wishForm.name = newVal
+    }
+}, { immediate: true })
+
+// Tự động gán bên tham dự (Nhà gái / Nhà trai) theo bên đang xem
+watch(currentSide, (newSide) => {
+    if (!wishForm.side) {
+        wishForm.side = newSide === 'gai' ? 'Khách mời cô dâu' : 'Khách mời chú rể'
+    }
+}, { immediate: true })
+
+// Tải danh sách lời chúc từ server API (/api/wishes)
+const fetchWishes = async () => {
+    isLoadingWishes.value = true
+    try {
+        const res = await $fetch<{ success: boolean; wishes: WishItem[] }>('/api/wishes')
+        if (res && res.success && Array.isArray(res.wishes)) {
+            wishes.value = res.wishes
+        }
+    } catch (err) {
+        console.error('Lỗi khi tải danh sách lời chúc:', err)
+    } finally {
+        isLoadingWishes.value = false
+    }
+}
+
+// Định dạng thời gian gửi lời chúc hiển thị thân thiện (Vừa xong, 5 phút trước, dd/MM/yyyy)
+const formatWishTime = (dateStr?: string) => {
+    if (!dateStr) return ''
+    try {
+        const date = new Date(dateStr)
+        if (isNaN(date.getTime())) return ''
+        const now = new Date()
+        const diffMs = now.getTime() - date.getTime()
+        const diffMinutes = Math.floor(diffMs / 60000)
+        const diffHours = Math.floor(diffMs / 3600000)
+        const diffDays = Math.floor(diffMs / 86400000)
+
+        if (diffMinutes < 1) return 'Vừa xong'
+        if (diffMinutes < 60) return `${diffMinutes} phút trước`
+        if (diffHours < 24) return `${diffHours} giờ trước`
+        if (diffDays === 1) return 'Hôm qua'
+        if (diffDays < 7) return `${diffDays} ngày trước`
+
+        const pad = (n: number) => (n < 10 ? '0' + n : '' + n)
+        return `${pad(date.getDate())}/${pad(date.getMonth() + 1)}/${date.getFullYear()}`
+    } catch {
+        return ''
+    }
+}
+
+// Cuộn mượt đến form gửi lời chúc và focus vào ô nhập
+const focusWishForm = () => {
+    const formSection = document.getElementById('SECTION8')
+    if (formSection) {
+        formSection.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+    setTimeout(() => {
+        if (!wishForm.name && nameInputRef.value) {
+            nameInputRef.value.focus()
+            nameInputRef.value.classList.add('input-highlight')
+            setTimeout(() => nameInputRef.value?.classList.remove('input-highlight'), 1600)
+        } else if (messageInputRef.value) {
+            messageInputRef.value.focus()
+            messageInputRef.value.classList.add('input-highlight')
+            setTimeout(() => messageInputRef.value?.classList.remove('input-highlight'), 1600)
+        }
+    }, 450)
+}
+
+// Chọn nhanh lời chúc gợi ý từ danh sách empty state
+const pickQuickWish = (text: string) => {
+    wishForm.message = text
+    focusWishForm()
+    showToast('Đã chọn gợi ý! Bạn có thể chỉnh sửa thêm nếu muốn ✨')
+}
+
+// Xử lý gửi lời chúc và lưu vào file JSON
+const submitWishForm = async () => {
+    if (isSubmittingWish.value) return
+
+    // Hỗ trợ cả Vue v-model và fallback trực tiếp từ DOM input
+    const nameEl = document.querySelector('#FORM2 input[name="name"]') as HTMLInputElement | null
+    const msgEl = document.querySelector('#FORM2 textarea[name="message"]') as HTMLTextAreaElement | null
+    const attendEl = document.querySelector('#FORM2 select[name="form_item7"]') as HTMLSelectElement | null
+    const countEl = document.querySelector('#FORM2 select[name="form_item8"]') as HTMLSelectElement | null
+    const sideEl = document.querySelector('#FORM2 select[name="form_item9"]') as HTMLSelectElement | null
+
+    const name = (wishForm.name || nameEl?.value || '').trim()
+    const message = (wishForm.message || msgEl?.value || '').trim()
+    const attending = (wishForm.attending || attendEl?.value || '').trim()
+    const guestCount = (wishForm.guestCount || countEl?.value || '').trim()
+    const side = (wishForm.side || sideEl?.value || '').trim()
+
+    if (!name) {
+        showToast('Vui lòng nhập tên của bạn!')
+        if (nameEl) nameEl.focus()
+        else nameInputRef.value?.focus()
+        return
+    }
+
+    if (!message) {
+        showToast('Vui lòng để lại lời nhắn chúc mừng nhé!')
+        if (msgEl) msgEl.focus()
+        else messageInputRef.value?.focus()
+        return
+    }
+
+    isSubmittingWish.value = true
+    try {
+        const res = await $fetch<{ success: boolean; wish: WishItem }>('/api/wishes', {
+            method: 'POST',
+            body: {
+                name,
+                message,
+                attending,
+                guestCount,
+                side
+            }
+        })
+
+        if (res && res.success && res.wish) {
+            // Chèn lời chúc mới lên đầu danh sách hiển thị
+            wishes.value.unshift(res.wish)
+            wishForm.message = ''
+            if (msgEl) msgEl.value = ''
+
+            // Chỉ hiển thị toast thông báo thành công gọn gàng (không mở modal)
+            showToast('Cảm ơn bạn đã gửi lời chúc mừng! ❤️')
+
+            // Cuộn mượt nhẹ xuống khung lời chúc
+            setTimeout(() => {
+                const wishesSection = document.getElementById('SECTION11')
+                if (wishesSection) {
+                    wishesSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+                }
+            }, 400)
+        }
+    } catch (err: any) {
+        console.error('Lỗi khi gửi lời chúc:', err)
+        showToast(err?.data?.statusMessage || 'Có lỗi xảy ra, bạn vui lòng thử lại nhé!')
+    } finally {
+        isSubmittingWish.value = false
+    }
+}
+
+// 6. Popups & Actions
 const initPopupsAndActions = () => {
     const backdrop = document.getElementById('backdrop-popup')
-    const popup1 = document.getElementById('POPUP1') // Thank you popup
-    const popup2 = document.getElementById('POPUP2') // Gift / Bank popup
     const popup3 = document.getElementById('POPUP3') // Lightbox gallery
 
     const closeAllPopups = () => {
         if (backdrop) backdrop.classList.remove('is-active')
-        if (popup1) popup1.classList.remove('is-active')
-        if (popup2) popup2.classList.remove('is-active')
         if (popup3) popup3.classList.remove('is-active')
     }
 
@@ -1588,39 +1522,21 @@ const initPopupsAndActions = () => {
         })
     })
 
-    // BUTTON3: "GỬI QUÀ MỪNG CƯỚI"
-    const btnGift = document.getElementById('BUTTON3')
-    if (btnGift) {
-        btnGift.style.cursor = 'pointer'
-        btnGift.addEventListener('click', (e) => {
+    // Đảm bảo click vào nút GỬI LỜI NHẮN & XÁC NHẬN luôn kích hoạt
+    const btn2 = document.getElementById('BUTTON2')
+    if (btn2) {
+        btn2.style.cursor = 'pointer'
+        btn2.addEventListener('click', (e) => {
             e.preventDefault()
-            if (backdrop) backdrop.classList.add('is-active')
-            if (popup2) popup2.classList.add('is-active')
+            submitWishForm()
         })
     }
 
-    // Copy STK in POPUP2 (HEADLINE134)
-    const stkEl = document.getElementById('HEADLINE134')
-    if (stkEl) {
-        stkEl.style.cursor = 'pointer'
-        stkEl.setAttribute('title', 'Nhấn để sao chép số tài khoản')
-        stkEl.addEventListener('click', () => {
-            const accNum = currentSideConfig.value.banking.accountNumber
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(accNum)
-                showToast(`Đã sao chép số tài khoản: ${accNum}`)
-            }
-        })
-    }
-
-    // Form RSVP Submit (BUTTON2 in FORM2)
-    const formEl = document.querySelector('#FORM2 form')
+    const formEl = document.querySelector('#FORM2 form') as HTMLFormElement | null
     if (formEl) {
         formEl.addEventListener('submit', (e) => {
             e.preventDefault()
-            if (backdrop) backdrop.classList.add('is-active')
-            if (popup1) popup1.classList.add('is-active')
-            showToast('Cảm ơn bạn đã gửi lời nhắn & xác nhận!')
+            submitWishForm()
         })
     }
 
@@ -1642,57 +1558,6 @@ const initPopupsAndActions = () => {
             if (popup3) popup3.classList.add('is-active')
         })
     })
-
-    // JMII Wedding Wishes loader
-    loadJmiiWishes()
-}
-
-// 6. Wishes API Loader (Google Apps Script)
-const loadJmiiWishes = () => {
-    const WEDDING_ID = 'vuquynh1'
-    const API = 'https://script.google.com/macros/s/AKfycbxMQvp2C4Dz6ntvpPoNHzJl0doaknjNmX86VmeI83E64dJ8M25RVl5-t01aqyuZR7PS/exec'
-    const listEl = document.getElementById('jmii-list')
-    if (!listEl) return
-
-    const callbackName = 'jmiiWishesCallback_' + Date.now() + '_' + Math.floor(Math.random() * 100000)
-    const script = document.createElement('script')
-
-        ; (window as any)[callbackName] = (data: any) => {
-            if (data && data.success && Array.isArray(data.wishes)) {
-                if (data.wishes.length === 0) {
-                    listEl.innerHTML = '<div class="jmii-loading">Chưa có lời chúc nào.</div>'
-                } else {
-                    listEl.innerHTML = ''
-                    data.wishes.forEach((w: any) => {
-                        const item = document.createElement('div')
-                        item.className = 'jmii-wish'
-                        const nameEl = document.createElement('div')
-                        nameEl.className = 'jmii-name'
-                        nameEl.textContent = w.name || 'Khách mời'
-                        const msgEl = document.createElement('div')
-                        msgEl.className = 'jmii-message'
-                        msgEl.textContent = w.content || w.message || ''
-                        item.appendChild(nameEl)
-                        item.appendChild(msgEl)
-                        listEl.appendChild(item)
-                    })
-                }
-            }
-            cleanup()
-        }
-
-    const cleanup = () => {
-        try {
-            delete (window as any)[callbackName]
-        } catch (e) {
-            ; (window as any)[callbackName] = null
-        }
-        if (script.parentNode) script.parentNode.removeChild(script)
-    }
-
-    script.onerror = cleanup
-    script.src = API + '?weddingId=' + encodeURIComponent(WEDDING_ID) + '&callback=' + encodeURIComponent(callbackName) + '&t=' + Date.now()
-    document.head.appendChild(script)
 }
 
 onMounted(() => {
@@ -1701,6 +1566,7 @@ onMounted(() => {
     initCountdown()
     initScrollAnimations()
     initPopupsAndActions()
+    fetchWishes()
 })
 
 onUnmounted(() => {
@@ -1744,6 +1610,7 @@ onUnmounted(() => {
 
 /* Floating Side Switcher (Nhà trai / Nhà gái) */
 .side-switcher-bar {
+    display: none;
     position: fixed;
     top: 16px;
     right: 16px;
@@ -2040,6 +1907,199 @@ onUnmounted(() => {
     background-repeat: no-repeat !important;
 }
 
+/* Lịch Tháng 12/2026 */
+:deep(.calendar-day-number) {
+    width: 26px !important;
+}
+
+:deep(.calendar-day-number > .ladi-headline) {
+    font-family: 'TESQSSRUdVTEFSLlRURg', 'Lora', serif !important;
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    color: rgb(146, 131, 98) !important;
+    text-align: center !important;
+}
+
+:deep(.calendar-day-number > .ladi-headline:hover) {
+    opacity: 0.8;
+}
+
+:deep(.calendar-day-number.is-highlighted > .ladi-headline) {
+    font-weight: 700 !important;
+    color: rgb(110, 95, 60) !important;
+}
+
+:deep(#IMAGE33) {
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1), top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Header Album: KHOẢNH KHẮC của YÊU THƯƠNG & Căn chỉnh khoảng cách Album */
+:deep(#GROUP31) {
+    width: 420px !important;
+    left: 0 !important;
+    top: 26px !important;
+    height: 46px !important;
+}
+
+:deep(#GROUP31 > .ladi-group) {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 8px !important;
+}
+
+:deep(#HEADLINE140),
+:deep(#HEADLINE141),
+:deep(#HEADLINE142) {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    top: auto !important;
+    left: auto !important;
+}
+
+:deep(#HEADLINE140 > .ladi-headline),
+:deep(#HEADLINE141 > .ladi-headline) {
+    font-family: 'TESQSSRUdVTEFSLlRURg', 'Lora', serif !important;
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+}
+
+:deep(#HEADLINE142 > .ladi-headline) {
+    font-family: 'MUZUViWSVAtSElHSCTUElSSVRFRCPVEY', cursive !important;
+    font-size: 42px !important;
+    line-height: 1 !important;
+    color: #ffffff !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Đôn toàn bộ các khung ảnh trong SECTION7 lên sau khi bỏ text giới thiệu */
+:deep(#BOX42) {
+    top: 96px !important;
+}
+
+:deep(#BOX43),
+:deep(#BOX44) {
+    top: 364px !important;
+}
+
+:deep(#BOX45) {
+    top: 561px !important;
+}
+
+:deep(#GROUP68) {
+    top: 760px !important;
+}
+
+:deep(#GROUP67) {
+    top: 1016px !important;
+}
+
+:deep(#SECTION7),
+:deep(#SECTION7 #GROUP75),
+:deep(#SECTION7 #BOX14) {
+    height: 1327px !important;
+}
+
+/* Thu gọn khoảng cách SECTION8 sau khi bỏ nút GỬI QUÀ MỪNG CƯỚI */
+:deep(#GROUP70) {
+    height: 315px !important;
+}
+
+:deep(#SECTION8) {
+    height: 520px !important;
+}
+
+/* SECTION11 tự động co giãn vừa vặn theo nội dung: ít thì ôm gọn, nhiều thì mở rộng tối đa 440px */
+:deep(#SECTION11) {
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+:deep(#SECTION11 > .ladi-container) {
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+:deep(#IMAGE72) {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none !important;
+}
+
+:deep(#IMAGE72 > .ladi-image),
+:deep(#IMAGE72 > .ladi-image > .ladi-image-background) {
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover !important;
+    background-repeat: repeat-y !important;
+    pointer-events: none !important;
+}
+
+:deep(#IMAGE73) {
+    display: none !important;
+}
+
+:deep(#HTML_CODE2) {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+:deep(#HTML_CODE2 > .ladi-html-code) {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+:deep(#jmii-wishes) {
+    width: 100% !important;
+    height: auto !important;
+    padding: 24px 20px 10px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+:deep(#jmii-scroll) {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: 440px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-right: 6px !important;
+}
+
+/* Đóng gọn footer SECTION9 sau khi bỏ thanh link mạng xã hội / logo */
+:deep(#SECTION9) {
+    height: 318px !important;
+}
+
+@media (max-width: 380px) {
+    :deep(#HEADLINE140 > .ladi-headline),
+    :deep(#HEADLINE141 > .ladi-headline) {
+        font-size: 17px !important;
+    }
+    :deep(#HEADLINE142 > .ladi-headline) {
+        font-size: 36px !important;
+    }
+}
+
 @media (max-width: 480px) {
     .side-switcher-bar {
         top: 10px;
@@ -2056,5 +2116,280 @@ onUnmounted(() => {
         width: 80px;
         font-size: 11px;
     }
+}
+
+/* ==========================================================
+   JMII WISHES - LOADING, EMPTY STATE & DYNAMIC LIST
+   ========================================================== */
+
+/* Trạng thái đang tải */
+:deep(.jmii-loading-box) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 10px;
+    text-align: center;
+}
+
+:deep(.loading-spin-heart) {
+    font-size: 32px;
+    display: inline-block;
+    animation: pulseHeart 1.4s ease-in-out infinite;
+}
+
+:deep(.loading-text) {
+    margin-top: 10px;
+    font-family: 'Lora', Georgia, serif;
+    font-size: 13px;
+    font-style: italic;
+    color: #705628;
+    opacity: 0.85;
+}
+
+@keyframes pulseHeart {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; }
+}
+
+/* Empty State khi chưa có lời chúc nào */
+:deep(.jmii-empty-container) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px 12px 24px;
+    width: 100%;
+    box-sizing: border-box;
+    animation: fadeInEmpty 0.6s ease-out;
+}
+
+@keyframes fadeInEmpty {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+:deep(.empty-icon-box) {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(162, 149, 120, 0.18) 0%, rgba(255, 255, 255, 0) 72%);
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+:deep(.empty-main-icon) {
+    font-size: 40px;
+    line-height: 1;
+    display: inline-block;
+    filter: drop-shadow(0 3px 6px rgba(112, 86, 40, 0.2));
+    animation: floatIcon 3.2s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-5px) rotate(3deg); }
+}
+
+:deep(.empty-sparkle) {
+    position: absolute;
+    font-size: 14px;
+    line-height: 1;
+    animation: sparkleTwinkle 2.5s ease-in-out infinite;
+}
+
+:deep(.empty-sparkle.sp-1) {
+    top: 4px;
+    right: 4px;
+    animation-delay: 0.3s;
+}
+
+:deep(.empty-sparkle.sp-2) {
+    bottom: 6px;
+    left: 4px;
+    animation-delay: 1.2s;
+}
+
+@keyframes sparkleTwinkle {
+    0%, 100% { opacity: 0.25; transform: scale(0.75); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+:deep(.empty-title) {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 15.5px;
+    font-weight: 600;
+    color: #705628;
+    line-height: 1.4;
+    margin: 4px 0 6px;
+}
+
+:deep(.empty-desc) {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 12px;
+    color: #84755a;
+    line-height: 1.6;
+    max-width: 290px;
+    margin-bottom: 14px;
+    opacity: 0.95;
+}
+
+:deep(.empty-action-btn) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 22px;
+    background: #a29578;
+    color: #ffffff;
+    font-family: 'Lora', Georgia, serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(162, 149, 120, 0.35);
+    transition: all 0.25s ease;
+}
+
+:deep(.empty-action-btn:hover),
+:deep(.empty-action-btn:active) {
+    background: #877759;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(162, 149, 120, 0.45);
+}
+
+:deep(.empty-quick-wishes) {
+    margin-top: 14px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+:deep(.quick-chip-label) {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 11px;
+    font-style: italic;
+    color: #8c7e65;
+    margin-bottom: 2px;
+}
+
+:deep(.quick-chip) {
+    width: auto;
+    max-width: 96%;
+    padding: 5px 12px;
+    background: rgba(162, 149, 120, 0.1);
+    border: 1px dashed rgba(112, 86, 40, 0.3);
+    border-radius: 14px;
+    font-family: 'Lora', Georgia, serif;
+    font-size: 11.5px;
+    font-style: italic;
+    color: #705628;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+:deep(.quick-chip:hover),
+:deep(.quick-chip:active) {
+    background: rgba(162, 149, 120, 0.22);
+    border-color: #705628;
+    transform: scale(1.02);
+}
+
+/* Wish Items - Dynamic List */
+:deep(.animate-wish) {
+    animation: fadeInWish 0.4s ease-out;
+}
+
+@keyframes fadeInWish {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+:deep(.jmii-wish-header) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 8px;
+    margin-bottom: 4px;
+}
+
+:deep(.jmii-side-badge) {
+    display: inline-block;
+    font-size: 10px;
+    padding: 1px 7px;
+    border-radius: 8px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+}
+
+:deep(.groom-badge) {
+    background: rgba(112, 86, 40, 0.12);
+    color: #705628;
+    border: 1px solid rgba(112, 86, 40, 0.25);
+}
+
+:deep(.bride-badge) {
+    background: rgba(206, 129, 142, 0.14);
+    color: #9c4b5b;
+    border: 1px solid rgba(206, 129, 142, 0.28);
+}
+
+:deep(.jmii-attend-badge) {
+    display: inline-block;
+    font-size: 9.5px;
+    padding: 1px 6px;
+    border-radius: 8px;
+    background: rgba(56, 142, 60, 0.1);
+    color: #2e7d32;
+    border: 1px solid rgba(56, 142, 60, 0.25);
+    font-weight: 500;
+}
+
+:deep(.jmii-time) {
+    margin-left: auto;
+    font-size: 11px;
+    font-style: italic;
+    color: #9d8f76;
+}
+
+:deep(.input-highlight) {
+    animation: inputHighlightPulse 1.6s ease-out;
+}
+
+@keyframes inputHighlightPulse {
+    0% { outline: 2px solid #705628; box-shadow: 0 0 0 4px rgba(112, 86, 40, 0.35); }
+    50% { outline: 2px solid #705628; box-shadow: 0 0 0 7px rgba(112, 86, 40, 0.2); }
+    100% { outline: none; box-shadow: none; }
+}
+
+:deep(.is-loading) {
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+:deep(#BUTTON2) {
+    z-index: 99 !important;
+}
+
+:deep(#BUTTON2),
+:deep(#BUTTON2 .ladi-button),
+:deep(#BUTTON2 #BUTTON_TEXT2),
+:deep(#BUTTON2 .ladi-headline) {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    user-select: none;
 }
 </style>
