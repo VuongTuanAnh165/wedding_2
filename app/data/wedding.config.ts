@@ -101,9 +101,9 @@ export const weddingShared: SharedWeddingConfig = {
     canonicalUrl: 'https://invitations.jmiiwedding.com/doha'
   },
   music: {
-    title: 'Ngày Đầu Tiên',
-    src: '/audio/wedding-song.mp3',
-    fallbackSrc: 'https://camcui.vn/bai157.mp3'
+    title: 'Ngày Này, Người Con Gái Này',
+    src: encodeURI('/audio/Ngày Này, Người Con Gái Này.mp3'),
+    fallbackSrc: encodeURI('/audio/Ngày Này, Người Con Gái Này.mp3')
   },
   wishesApi: {
     endpoint: 'https://script.google.com/macros/s/AKfycbxMQvp2C4Dz6ntvpPoNHzJl0doaknjNmX86VmeI83E64dJ8M25RVl5-t01aqyuZR7PS/exec',

@@ -1100,7 +1100,7 @@ const initViewport = () => {
 
 // 2. Audio Player Logic (iOS + Android + Desktop)
 const initAudio = () => {
-    audio = new Audio('https://camcui.vn/bai157.mp3')
+    audio = new Audio(encodeURI('/audio/Ngày Này, Người Con Gái Này.mp3'))
     audio.loop = true
 
     const toggleBtn = document.getElementById('music-toggle')
@@ -1610,7 +1610,7 @@ onUnmounted(() => {
 
 /* Floating Side Switcher (Nhà trai / Nhà gái) */
 .side-switcher-bar {
-    display: none;
+    display: none !important;
     position: fixed;
     top: 16px;
     right: 16px;
