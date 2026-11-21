@@ -94,7 +94,7 @@ export const weddingShared: SharedWeddingConfig = {
     name: 'Vũ Thu Trang',
     shortName: 'Thu Trang',
     father: 'Ông Vũ Đức Khải',
-    mother: 'Bà Hoàng Thị Phượng'
+    mother: 'Bà Hoàng Thị Phương'
   },
   meta: {
     ogImage: 'https://static.ladipage.net/6322a62f2dad980013bb5005/571372648_1401349385330791_7634124945013556421_n-20251031104042-8uzz1.jpg',
@@ -135,7 +135,7 @@ export const weddingSides: Record<WeddingSide, SideSpecificConfig> = {
     secondFamily: {
       title: 'NHÀ GÁI',
       father: 'Ông Vũ Đức Khải',
-      mother: 'Bà Hoàng Thị Phượng'
+      mother: 'Bà Hoàng Thị Phương'
     },
     timelineTitle: 'Lịch trình buổi tiệc',
     timeline: [
@@ -186,7 +186,7 @@ export const weddingSides: Record<WeddingSide, SideSpecificConfig> = {
     firstFamily: {
       title: 'NHÀ GÁI',
       father: 'Ông Vũ Đức Khải',
-      mother: 'Bà Hoàng Thị Phượng'
+      mother: 'Bà Hoàng Thị Phương'
     },
     secondFamily: {
       title: 'NHÀ TRAI',
