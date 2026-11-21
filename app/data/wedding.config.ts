@@ -163,8 +163,8 @@ export const weddingSides: Record<WeddingSide, SideSpecificConfig> = {
       qrImage: 'https://w.ladicdn.com/s450x450/6322a62f2dad980013bb5005/screenshot_1763309137-20251116160544-zqlfc.png'
     },
     meta: {
-      title: 'Xuân Thành & Thu Trang - Tiệc Mừng Nhà Trai',
-      description: 'Thiệp cưới điện tử của Xuân Thành & Thu Trang (Tiệc mừng Nhà trai)'
+      title: 'Xuân Thành & Thu Trang',
+      description: 'Thiệp cưới điện tử của Xuân Thành & Thu Trang'
     }
   },
 
@@ -219,8 +219,8 @@ export const weddingSides: Record<WeddingSide, SideSpecificConfig> = {
       qrImage: 'https://w.ladicdn.com/s450x450/6322a62f2dad980013bb5005/screenshot_1763309137-20251116160544-zqlfc.png'
     },
     meta: {
-      title: 'Thu Trang & Xuân Thành - Tiệc Mừng Nhà Gái',
-      description: 'Thiệp cưới điện tử của Thu Trang & Xuân Thành (Tiệc mừng Nhà gái)'
+      title: 'Thu Trang & Xuân Thành',
+      description: 'Thiệp cưới điện tử của Thu Trang & Xuân Thành'
     }
   }
 }
@@ -244,11 +244,14 @@ export function resolveWeddingSide(rawParam?: unknown): WeddingSide {
 
 /**
  * Định dạng dòng chữ lời mời khách ở thiệp trong phong bì (HEADLINE7)
- * Cấu trúc: "TRÂN TRỌNG KÍNH MỜI ... ĐẾN DỰ LỄ ĂN HỎI CỦA"
+ * Cấu trúc: "TRÂN TRỌNG KÍNH MỜI ... ĐẾN DỰ [LỄ CƯỚI / LỄ ĂN HỎI] CỦA"
+ * - Nhà gái: LỄ ĂN HỎI
+ * - Nhà trai: LỄ CƯỚI
  * Chỗ ... sẽ được thay thế bằng tên khách mời lấy từ param URL (?to=, ?guest=, ?name=, ?khach=)
  * Mặc định khi không truyền param: 'QUÝ KHÁCH'
  */
-export function formatInvitationLead(guestName?: string): string {
+export function formatInvitationLead(guestName?: string, side: WeddingSide = 'trai'): string {
   const name = guestName && guestName.trim() ? guestName.trim() : 'QUÝ KHÁCH'
-  return `TRÂN TRỌNG KÍNH MỜI <span class="guest-name-highlight">${name}</span><br>ĐẾN DỰ LỄ ĂN HỎI CỦA`
+  const eventName = side === 'gai' ? 'LỄ ĂN HỎI' : 'LỄ CƯỚI'
+  return `TRÂN TRỌNG KÍNH MỜI <span class="guest-name-highlight">${name}</span><br>ĐẾN DỰ ${eventName} CỦA`
 }

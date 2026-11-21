@@ -12,15 +12,15 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'vi'
       },
-      title: 'Xuân Thành & Thu Trang Mới',
+      title: 'Xuân Thành & Thu Trang',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=420, user-scalable=no, initial-scale=1.0' },
-        { name: 'description', content: 'Xuân Thành & Thu Trang Mới' },
-        { property: 'og:title', content: 'Xuân Thành & Thu Trang Mới' },
+        { name: 'description', content: 'Thiệp cưới điện tử của Xuân Thành & Thu Trang' },
+        { property: 'og:title', content: 'Xuân Thành & Thu Trang' },
         { property: 'og:type', content: 'website' },
         { property: 'og:image', content: '/images/1.webp' },
-        { property: 'og:description', content: 'Xuân Thành & Thu Trang Mới' },
+        { property: 'og:description', content: 'Thiệp cưới điện tử của Xuân Thành & Thu Trang' },
         { name: 'format-detection', content: 'telephone=no' }
       ],
       link: [

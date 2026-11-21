@@ -3517,15 +3517,19 @@ body {
 }
 
 #GROUP24 {
-    width: 142.037px;
+    width: 115.33px;
     height: 38.7px;
     top: 74.63px;
-    left: 64.982px;
+    left: 91.685px;
 }
 
 #GROUP25 {
-    width: 117.088px;
+    width: 90.38px;
     height: 38.7px;
+}
+
+#BOX27 {
+    display: none !important;
 }
 
 #BOX27,
@@ -3551,7 +3555,7 @@ body {
 
 #BOX28 {
     top: 0px;
-    left: 26.7032px;
+    left: 0px;
 }
 
 #BOX28>.ladi-box,
@@ -3570,7 +3574,7 @@ body {
 
 #BOX29 {
     top: 0px;
-    left: 53.4323px;
+    left: 26.73px;
 }
 
 #BOX29>.ladi-box {
@@ -3579,7 +3583,7 @@ body {
 
 #BOX30 {
     top: 0px;
-    left: 78.3882px;
+    left: 51.685px;
 }
 
 #BOX30>.ladi-box {
@@ -3590,7 +3594,7 @@ body {
     width: 38.6999px;
     height: 38.7px;
     top: 0px;
-    left: 103.337px;
+    left: 76.634px;
 }
 
 #BOX31>.ladi-box {
@@ -3608,8 +3612,8 @@ body {
 }
 
 #HEADLINE135>.ladi-headline {
-    font-family: QkVZTEUEVSRkVDVElPTiSRUdVTEFSLlRURg;
-    font-size: 33.43px;
+    font-family: QkVZTEUEVSRkVDVElPTiSRUdVTEFSLlRURg, 'Lora', serif;
+    font-size: 24px;
     line-height: 1.6;
     color: rgb(255, 255, 255);
     text-align: right;

@@ -389,9 +389,6 @@
                                         <div class="ladi-group">
                                             <div id="GROUP25" class="ladi-element">
                                                 <div class="ladi-group">
-                                                    <div id="BOX27" class="ladi-element ladi-animation-hidden">
-                                                        <div class="ladi-box ladi-transition"></div>
-                                                    </div>
                                                     <div id="BOX28" class="ladi-element ladi-animation-hidden">
                                                         <div class="ladi-box ladi-transition"></div>
                                                     </div>
@@ -411,7 +408,7 @@
                                     <div id="GROUP35" class="ladi-element ladi-animation-hidden">
                                         <div class="ladi-group">
                                             <div id="HEADLINE135" class="ladi-element">
-                                                <p class="ladi-headline ladi-transition">Dress code<br></p>
+                                                <p class="ladi-headline ladi-transition">Màu sắc trang phục<br></p>
                                             </div>
                                             <div id="LINE11" class="ladi-element">
                                                 <div class="ladi-line">
@@ -1034,7 +1031,7 @@ const guestName = computed(() => {
 })
 
 const invitationLeadText = computed(() => {
-    return formatInvitationLead(guestName.value)
+    return formatInvitationLead(guestName.value, currentSide.value)
 })
 
 const onGuestInputChange = (e: Event) => {
@@ -1843,7 +1840,11 @@ onUnmounted(() => {
 :deep(#HEADLINE146),
 :deep(#IMAGE24),
 :deep(#IMAGE25),
-:deep(#IMAGE48) {
+:deep(#IMAGE48),
+:deep(#LINE5),
+:deep(#BOX9),
+:deep(#BOX10),
+:deep(#BOX50) {
     opacity: 1 !important;
     visibility: visible !important;
 }
@@ -1854,7 +1855,7 @@ onUnmounted(() => {
 
 :deep(#HEADLINE38 > .ladi-headline) {
     font-family: 'VVZOSGhVGFMSdGY', 'Playball', 'Lora', cursive, serif !important;
-    font-size: 28px !important;
+    font-size: 26px !important;
     line-height: 1.4 !important;
     color: #ffffff !important;
     text-align: left !important;
@@ -1865,18 +1866,90 @@ onUnmounted(() => {
     top: 18px !important;
 }
 
-:deep(#HEADLINE39),
-:deep(#HEADLINE40),
+/* Căn chỉnh các mốc thời gian cô đọng, dời lên cao trên nền tường trắng để hoàn toàn không che mặt/miệng cô dâu */
+:deep(#IMAGE24) {
+    top: 56px !important;
+    left: 130px !important;
+    width: 44px !important;
+    height: 38px !important;
+}
+
+:deep(#IMAGE24 > .ladi-image > .ladi-image-background) {
+    width: 44px !important;
+    height: 38px !important;
+    background-size: contain !important;
+}
+
+:deep(#BOX9) {
+    top: 71px !important;
+    left: 191px !important;
+}
+
+:deep(#HEADLINE39) {
+    top: 60px !important;
+    left: 212px !important;
+    width: 195px !important;
+}
+
+:deep(#IMAGE25) {
+    top: 116px !important;
+    left: 130px !important;
+    width: 44px !important;
+    height: 28px !important;
+}
+
+:deep(#IMAGE25 > .ladi-image > .ladi-image-background) {
+    width: 44px !important;
+    height: 28px !important;
+    background-size: contain !important;
+}
+
+:deep(#BOX10) {
+    top: 125px !important;
+    left: 191px !important;
+}
+
+:deep(#HEADLINE40) {
+    top: 114px !important;
+    left: 212px !important;
+    width: 195px !important;
+}
+
+:deep(#IMAGE48) {
+    top: 170px !important;
+    left: 132px !important;
+    width: 40px !important;
+    height: 42px !important;
+}
+
+:deep(#IMAGE48 > .ladi-image > .ladi-image-background) {
+    width: 40px !important;
+    height: 42px !important;
+    background-size: contain !important;
+}
+
+:deep(#BOX50) {
+    top: 181px !important;
+    left: 191px !important;
+}
+
 :deep(#HEADLINE146) {
-    width: 190px !important;
-    left: 218px !important;
+    top: 170px !important;
+    left: 212px !important;
+    width: 195px !important;
+}
+
+:deep(#LINE5) {
+    top: 56px !important;
+    left: 187px !important;
+    height: 140px !important;
 }
 
 :deep(#HEADLINE39 > .ladi-headline),
 :deep(#HEADLINE40 > .ladi-headline),
 :deep(#HEADLINE146 > .ladi-headline) {
     font-family: 'TESQSSRUdVTEFSLlRURg', 'Lora', serif !important;
-    font-size: 15px !important;
+    font-size: 13.5px !important;
     line-height: 1.35 !important;
     letter-spacing: 0.3px !important;
     color: #ffffff !important;
