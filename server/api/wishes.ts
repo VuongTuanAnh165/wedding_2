@@ -1,7 +1,3 @@
-import { promises as fs } from 'node:fs'
-import path from 'node:path'
-import defaultWishes from '../../data/wishes.json'
-
 export interface WishItem {
     id: string
     name: string
@@ -12,11 +8,11 @@ export interface WishItem {
     createdAt: string
 }
 
-// Google Apps Script Web App URL của bạn
+// Google Apps Script Web App URL kết nối trực tiếp với Google Sheet của bạn
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxttwY2SD9BgiYW9SqA7GbuMb-QQjCUZjOCFnOgWUml-1Tvi4UdZ-5dThgYYxrgPsHqvQ/exec'
 
-// Bộ nhớ tạm khởi tạo từ default wishes
-let wishesCache: WishItem[] = Array.isArray(defaultWishes) ? [...defaultWishes] : []
+// Bộ nhớ tạm trong phiên làm việc
+let wishesCache: WishItem[] = []
 
 // Đọc danh sách lời chúc từ Google Sheet
 async function getWishesFromGoogleSheet(): Promise<WishItem[]> {
@@ -33,18 +29,18 @@ async function getWishesFromGoogleSheet(): Promise<WishItem[]> {
 
         if (res.ok) {
             const data = await res.json()
-            if (data && data.success && Array.isArray(data.wishes) && data.wishes.length > 0) {
+            if (data && data.success && Array.isArray(data.wishes)) {
                 wishesCache = data.wishes
                 return wishesCache
             }
         }
     } catch (err) {
-        console.warn('Lỗi đọc từ Google Sheet, sử dụng dữ liệu dự phòng:', err)
+        console.warn('Lỗi đọc từ Google Sheet:', err)
     }
     return wishesCache
 }
 
-// Gửi lời chúc mới sang Google Sheet
+// Gửi lời chúc mới tự động ghi 1 dòng vào Google Sheet
 async function sendWishToGoogleSheet(data: { name: string; message: string; attending?: string; guestCount?: string; side?: string }) {
     try {
         const controller = new AbortController()
@@ -66,10 +62,9 @@ async function sendWishToGoogleSheet(data: { name: string; message: string; atte
 export default defineEventHandler(async (event) => {
     const method = getMethod(event)
 
-    // GET /api/wishes -> Đọc trực tiếp từ Google Sheet (mới nhất lên đầu)
+    // GET /api/wishes -> Đọc trực tiếp từ Google Sheet (lời chúc mới nhất lên đầu)
     if (method === 'GET') {
         const list = await getWishesFromGoogleSheet()
-        // Đảo ngược thứ tự để lời chúc mới nhất trong Sheet luôn hiển thị lên đầu
         const sorted = [...list].reverse()
         return {
             success: true,
@@ -103,17 +98,11 @@ export default defineEventHandler(async (event) => {
             createdAt: new Date().toISOString()
         }
 
-        // Cập nhật bộ nhớ tạm
+        // Cập nhật bộ nhớ tạm để hiển thị ngay
         wishesCache.push(newWish)
 
-        // 1. Tự động ghi 1 dòng mới vào Google Sheet của bạn
+        // Tự động ghi vào Google Sheet
         await sendWishToGoogleSheet({ name, message, attending, guestCount, side })
-
-        // 2. Ghi ra file data/wishes.json khi chạy ở local
-        try {
-            const filePath = path.resolve(process.cwd(), 'data', 'wishes.json')
-            await fs.writeFile(filePath, JSON.stringify(wishesCache, null, 2), 'utf-8')
-        } catch {}
 
         return {
             success: true,
