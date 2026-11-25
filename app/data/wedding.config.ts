@@ -113,8 +113,8 @@ export const weddingShared: SharedWeddingConfig = {
     fallbackSrc: encodeURI('/audio/Ngày Này, Người Con Gái Này.mp3')
   },
   wishesApi: {
-    endpoint: 'https://script.google.com/macros/s/AKfycbxMQvp2C4Dz6ntvpPoNHzJl0doaknjNmX86VmeI83E64dJ8M25RVl5-t01aqyuZR7PS/exec',
-    weddingId: 'vuquynh1'
+    endpoint: 'https://script.google.com/macros/s/AKfycbxttwY2SD9BgiYW9SqA7GbuMb-QQjCUZjOCFnOgWUml-1Tvi4UdZ-5dThgYYxrgPsHqvQ/exec',
+    weddingId: 'thanhtrang'
   }
 }
 

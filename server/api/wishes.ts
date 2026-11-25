@@ -1,7 +1,6 @@
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
-import os from 'node:os'
-import defaultWishesData from '../../data/wishes.json'
+import defaultWishes from '../../data/wishes.json'
 
 export interface WishItem {
     id: string
@@ -13,135 +12,72 @@ export interface WishItem {
     createdAt: string
 }
 
-// In-memory cache duy trì trong suốt vòng đời của container serverless
-let inMemoryWishes: WishItem[] | null = null
+// Google Apps Script Web App URL của bạn
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxttwY2SD9BgiYW9SqA7GbuMb-QQjCUZjOCFnOgWUml-1Tvi4UdZ-5dThgYYxrgPsHqvQ/exec'
 
-// Lấy danh sách mặc định từ file json được bundle sẵn trong source
-const getDefaultWishes = (): WishItem[] => {
-    if (Array.isArray(defaultWishesData)) {
-        return [...defaultWishesData]
-    }
-    return []
-}
+// Bộ nhớ tạm khởi tạo từ default wishes
+let wishesCache: WishItem[] = Array.isArray(defaultWishes) ? [...defaultWishes] : []
 
-// Kiểm tra cấu hình Vercel KV / Upstash Redis (nếu người dùng cấu hình trên Vercel)
-const getKvConfig = () => {
-    const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL
-    const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN
-    if (url && token) {
-        return { url, token }
-    }
-    return null
-}
+// Đọc danh sách lời chúc từ Google Sheet
+async function getWishesFromGoogleSheet(): Promise<WishItem[]> {
+    try {
+        const controller = new AbortController()
+        const timeout = setTimeout(() => controller.abort(), 6000)
 
-// Đường dẫn file lưu trữ: Trên local dùng data/wishes.json, trên Vercel/Serverless dùng /tmp/wishes.json
-const getWishesFilePath = () => {
-    const isServerless = !!(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME || process.env.NETLIFY)
-    if (isServerless) {
-        return path.resolve(os.tmpdir(), 'wedding_wishes.json')
-    }
-    return path.resolve(process.cwd(), 'data', 'wishes.json')
-}
+        const res = await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'GET',
+            redirect: 'follow',
+            signal: controller.signal
+        })
+        clearTimeout(timeout)
 
-async function readWishes(): Promise<WishItem[]> {
-    // 1. Kiểm tra Vercel KV / Upstash Redis nếu có
-    const kv = getKvConfig()
-    if (kv) {
-        try {
-            const res = await fetch(`${kv.url}/get/wedding_wishes`, {
-                headers: { Authorization: `Bearer ${kv.token}` }
-            })
-            if (res.ok) {
-                const data = await res.json()
-                if (data && data.result) {
-                    const parsed = typeof data.result === 'string' ? JSON.parse(data.result) : data.result
-                    if (Array.isArray(parsed) && parsed.length > 0) {
-                        inMemoryWishes = parsed
-                        return parsed
-                    }
-                }
+        if (res.ok) {
+            const data = await res.json()
+            if (data && data.success && Array.isArray(data.wishes) && data.wishes.length > 0) {
+                wishesCache = data.wishes
+                return wishesCache
             }
-        } catch (kvErr) {
-            console.warn('Lỗi đọc từ KV, chuyển sang bộ nhớ tạm:', kvErr)
         }
+    } catch (err) {
+        console.warn('Lỗi đọc từ Google Sheet, sử dụng dữ liệu dự phòng:', err)
     }
-
-    // 2. Nếu đã có trong memory cache
-    if (inMemoryWishes !== null && inMemoryWishes.length > 0) {
-        return inMemoryWishes
-    }
-
-    // 3. Đọc từ file hệ thống (/tmp trên serverless hoặc data/wishes.json trên local)
-    const filePath = getWishesFilePath()
-    try {
-        const raw = await fs.readFile(filePath, 'utf-8')
-        const parsed = JSON.parse(raw)
-        if (Array.isArray(parsed) && parsed.length > 0) {
-            inMemoryWishes = parsed
-            return inMemoryWishes
-        }
-    } catch {
-        // Nếu file chưa tồn tại hoặc lỗi đọc, nạp từ default bundle
-    }
-
-    inMemoryWishes = getDefaultWishes()
-    return inMemoryWishes
+    return wishesCache
 }
 
-async function saveWishes(wishes: WishItem[]): Promise<void> {
-    inMemoryWishes = wishes
-
-    // 1. Lưu vào Vercel KV / Upstash Redis nếu có
-    const kv = getKvConfig()
-    if (kv) {
-        try {
-            await fetch(`${kv.url}/set/wedding_wishes`, {
-                method: 'POST',
-                headers: {
-                    Authorization: `Bearer ${kv.token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(wishes)
-            })
-        } catch (kvErr) {
-            console.warn('Lỗi lưu vào KV:', kvErr)
-        }
-    }
-
-    // 2. Lưu vào file hệ thống (safe fallback)
-    const filePath = getWishesFilePath()
+// Gửi lời chúc mới sang Google Sheet
+async function sendWishToGoogleSheet(data: { name: string; message: string; attending?: string; guestCount?: string; side?: string }) {
     try {
-        await fs.mkdir(path.dirname(filePath), { recursive: true })
-        await fs.writeFile(filePath, JSON.stringify(wishes, null, 2), 'utf-8')
+        const controller = new AbortController()
+        const timeout = setTimeout(() => controller.abort(), 7000)
+
+        await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+            redirect: 'follow',
+            signal: controller.signal
+        })
+        clearTimeout(timeout)
     } catch (err) {
-        // Nếu gặp EROFS (Read-only filesystem) trên Vercel khi đường dẫn trỏ vào data/, fallback vào /tmp
-        try {
-            const tmpPath = path.resolve(os.tmpdir(), 'wedding_wishes.json')
-            await fs.writeFile(tmpPath, JSON.stringify(wishes, null, 2), 'utf-8')
-        } catch (tmpErr) {
-            console.warn('Không thể ghi file trên serverless (sử dụng in-memory):', tmpErr)
-        }
+        console.warn('Cảnh báo khi ghi vào Google Sheet:', err)
     }
 }
 
 export default defineEventHandler(async (event) => {
     const method = getMethod(event)
 
-    // GET /api/wishes -> Trả về danh sách lời chúc (mới nhất lên đầu)
+    // GET /api/wishes -> Đọc trực tiếp từ Google Sheet (mới nhất lên đầu)
     if (method === 'GET') {
-        const wishes = await readWishes()
-        const sorted = [...wishes].sort((a, b) => {
-            const timeA = new Date(a.createdAt || 0).getTime()
-            const timeB = new Date(b.createdAt || 0).getTime()
-            return timeB - timeA
-        })
+        const list = await getWishesFromGoogleSheet()
+        // Đảo ngược thứ tự để lời chúc mới nhất trong Sheet luôn hiển thị lên đầu
+        const sorted = [...list].reverse()
         return {
             success: true,
             wishes: sorted
         }
     }
 
-    // POST /api/wishes -> Lưu lời chúc mới
+    // POST /api/wishes -> Nhận lời chúc mới và lưu tự động vào Google Sheet
     if (method === 'POST') {
         const body = await readBody(event)
         const name = String(body?.name || '').trim()
@@ -151,21 +87,14 @@ export default defineEventHandler(async (event) => {
         const side = String(body?.side || '').trim()
 
         if (!name) {
-            throw createError({
-                statusCode: 400,
-                statusMessage: 'Vui lòng nhập tên của bạn!'
-            })
+            throw createError({ statusCode: 400, statusMessage: 'Vui lòng nhập tên của bạn!' })
         }
-
         if (!message) {
-            throw createError({
-                statusCode: 400,
-                statusMessage: 'Vui lòng nhập lời chúc của bạn!'
-            })
+            throw createError({ statusCode: 400, statusMessage: 'Vui lòng nhập lời chúc!' })
         }
 
         const newWish: WishItem = {
-            id: 'wish_' + Date.now() + '_' + Math.random().toString(36).substring(2, 8),
+            id: 'wish_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7),
             name,
             message,
             attending,
@@ -174,19 +103,17 @@ export default defineEventHandler(async (event) => {
             createdAt: new Date().toISOString()
         }
 
+        // Cập nhật bộ nhớ tạm
+        wishesCache.push(newWish)
+
+        // 1. Tự động ghi 1 dòng mới vào Google Sheet của bạn
+        await sendWishToGoogleSheet({ name, message, attending, guestCount, side })
+
+        // 2. Ghi ra file data/wishes.json khi chạy ở local
         try {
-            const currentWishes = await readWishes()
-            currentWishes.unshift(newWish)
-            await saveWishes(currentWishes)
-        } catch (saveErr) {
-            console.error('Lỗi khi lưu wishes:', saveErr)
-            // Đảm bảo vẫn cập nhật inMemoryWishes để không crash request
-            if (inMemoryWishes) {
-                inMemoryWishes.unshift(newWish)
-            } else {
-                inMemoryWishes = [newWish, ...getDefaultWishes()]
-            }
-        }
+            const filePath = path.resolve(process.cwd(), 'data', 'wishes.json')
+            await fs.writeFile(filePath, JSON.stringify(wishesCache, null, 2), 'utf-8')
+        } catch {}
 
         return {
             success: true,
@@ -195,8 +122,5 @@ export default defineEventHandler(async (event) => {
         }
     }
 
-    throw createError({
-        statusCode: 405,
-        statusMessage: 'Method Not Allowed'
-    })
+    throw createError({ statusCode: 405, statusMessage: 'Method Not Allowed' })
 })

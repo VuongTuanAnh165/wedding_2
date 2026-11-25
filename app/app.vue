@@ -1397,8 +1397,15 @@ const fetchWishes = async () => {
 const formatWishTime = (dateStr?: string) => {
     if (!dateStr) return ''
     try {
+        // Hỗ trợ định dạng chuỗi thời gian từ Google Sheet (ví dụ: "20:30:15 25/11/2026")
+        if (dateStr.includes('/')) {
+            const parts = dateStr.trim().split(/[\s,]+/)
+            const datePart = parts.find(p => p.includes('/'))
+            return datePart || dateStr
+        }
+
         const date = new Date(dateStr)
-        if (isNaN(date.getTime())) return ''
+        if (isNaN(date.getTime())) return dateStr
         const now = new Date()
         const diffMs = now.getTime() - date.getTime()
         const diffMinutes = Math.floor(diffMs / 60000)
@@ -1414,7 +1421,7 @@ const formatWishTime = (dateStr?: string) => {
         const pad = (n: number) => (n < 10 ? '0' + n : '' + n)
         return `${pad(date.getDate())}/${pad(date.getMonth() + 1)}/${date.getFullYear()}`
     } catch {
-        return ''
+        return dateStr || ''
     }
 }
 

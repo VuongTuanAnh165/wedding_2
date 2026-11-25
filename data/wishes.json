@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "id": "wish_1",
+    "name": "Ngô Ny",
+    "message": "Chúc mừng hạnh phúc hai anh chị! Chúc hai bạn trăm năm hạnh phúc, sớm đón thiên thần nhỏ nhé! 💕",
+    "attending": "Chắc chắn rồi",
+    "guestCount": "1 người",
+    "side": "Khách mời cô dâu",
+    "createdAt": "2026-11-25T08:30:00.000Z"
+  },
+  {
+    "id": "wish_2",
+    "name": "Thu A2",
+    "message": "Mừng ngày vui của hai bạn! Chúc Thành và Trang mãi mãi yêu thương, đồng hành cùng nhau trên mọi chặng đường. 🥂",
+    "attending": "Chắc chắn rồi",
+    "guestCount": "2 người",
+    "side": "Khách mời chú rể",
+    "createdAt": "2026-11-25T09:15:00.000Z"
+  },
+  {
+    "id": "wish_3",
+    "name": "Quyen Liu",
+    "message": "Congrats bé Trang & anh Thành. Chúc hai bạn có một hành trình hôn nhân viên mãn và ngọt ngào! ✨",
+    "attending": "Chắc chắn rồi",
+    "guestCount": "1 người",
+    "side": "Khách mời cô dâu",
+    "createdAt": "2026-11-25T10:00:00.000Z"
+  },
+  {
+    "id": "wish_4",
+    "name": "Anh Lak",
+    "message": "Chúc cô dâu luôn xinh đẹp rạng rỡ và hai em luôn thấu hiểu, sẻ chia cùng nhau. Chúc mừng hạnh phúc hai em! 💍",
+    "attending": "Chắc chắn rồi",
+    "guestCount": "2 người",
+    "side": "Khách mời chú rể",
+    "createdAt": "2026-11-25T11:20:00.000Z"
+  },
+  {
+    "id": "wish_5",
+    "name": "Nguyen Hien",
+    "message": "Chúc mừng bạn tôi chính thức lên xe hoa! Hạnh phúc ngập tràn nha hai vợ chồng. 🎉",
+    "attending": "Chắc chắn rồi",
+    "guestCount": "1 người",
+    "side": "Khách mời cô dâu",
+    "createdAt": "2026-11-25T12:05:00.000Z"
+  },
+  {
+    "id": "wish_6",
+    "name": "Nhung Le",
+    "message": "See you at the wedding! Thật vui khi được chứng kiến khoảnh khắc tuyệt vời này của hai bạn. Chúc hai bạn mãi hạnh phúc! 🌸",
+    "attending": "Chắc chắn rồi",
+    "guestCount": "1 người",
+    "side": "Khách mời cô dâu",
+    "createdAt": "2026-11-25T13:45:00.000Z"
+  }
+]
