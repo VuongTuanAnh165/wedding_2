@@ -15,7 +15,7 @@ export default defineNuxtConfig({
       title: 'Xuân Thành & Thu Trang',
       meta: [
         { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=420, user-scalable=no, initial-scale=1.0' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' },
         { name: 'description', content: 'Thiệp cưới điện tử của Xuân Thành & Thu Trang' },
         { property: 'og:title', content: 'Xuân Thành & Thu Trang' },
         { property: 'og:type', content: 'website' },

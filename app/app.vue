@@ -91,22 +91,17 @@
                                             <div class="ladi-image-background"></div>
                                         </div>
                                     </div>
-                                    <div id="IMAGE15" class="ladi-element ladi-animation">
-                                        <div class="ladi-image">
-                                            <div class="ladi-image-background"></div>
-                                        </div>
-                                    </div>
-                                    <div id="HEADLINE7" class="ladi-element ladi-animation">
+                                    <div id="HEADLINE7" class="ladi-element ladi-animation-hidden">
                                         <p class="ladi-headline ladi-transition" v-html="invitationLeadText"></p>
                                     </div>
-                                    <div id="HEADLINE9" class="ladi-element ladi-animation">
+                                    <div id="HEADLINE9" class="ladi-element ladi-animation-hidden">
                                         <p class="ladi-headline ladi-transition">{{ currentSideConfig.secondPersonName
                                         }}<br></p>
                                     </div>
-                                    <div id="HEADLINE10" class="ladi-element ladi-animation">
+                                    <div id="HEADLINE10" class="ladi-element ladi-animation-hidden">
                                         <p class="ladi-headline ladi-transition">&amp;<br></p>
                                     </div>
-                                    <div id="HEADLINE11" class="ladi-element ladi-animation">
+                                    <div id="HEADLINE11" class="ladi-element ladi-animation-hidden">
                                         <p class="ladi-headline ladi-transition">{{ currentSideConfig.countdownHeader ||
                                             'NGÀY TRỌNG ĐẠI SẼ DIỄN RA SAU' }}<br></p>
                                     </div>
@@ -159,19 +154,19 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="HEADLINE15" class="ladi-element ladi-animation">
+                                    <div id="HEADLINE15" class="ladi-element ladi-animation-hidden">
                                         <p class="ladi-headline ladi-transition">Ngày<br></p>
                                     </div>
-                                    <div id="HEADLINE16" class="ladi-element ladi-animation">
+                                    <div id="HEADLINE16" class="ladi-element ladi-animation-hidden">
                                         <p class="ladi-headline ladi-transition">Giờ<br></p>
                                     </div>
-                                    <div id="HEADLINE17" class="ladi-element ladi-animation">
+                                    <div id="HEADLINE17" class="ladi-element ladi-animation-hidden">
                                         <p class="ladi-headline ladi-transition">Phút<br></p>
                                     </div>
-                                    <div id="HEADLINE18" class="ladi-element ladi-animation">
+                                    <div id="HEADLINE18" class="ladi-element ladi-animation-hidden">
                                         <p class="ladi-headline ladi-transition">Giây<br></p>
                                     </div>
-                                    <div id="HEADLINE8" class="ladi-element ladi-animation">
+                                    <div id="HEADLINE8" class="ladi-element ladi-animation-hidden">
                                         <p class="ladi-headline ladi-transition">{{ currentSideConfig.firstPersonName
                                         }}<br></p>
                                     </div>
@@ -188,6 +183,11 @@
                                 </div>
                             </div>
                             <div id="IMAGE14" class="ladi-element">
+                                <div class="ladi-image">
+                                    <div class="ladi-image-background"></div>
+                                </div>
+                            </div>
+                            <div id="IMAGE15" class="ladi-element ladi-animation-hidden">
                                 <div class="ladi-image">
                                     <div class="ladi-image-background"></div>
                                 </div>
@@ -257,7 +257,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="GROUP11" class="ladi-element ladi-animation">
+                    <div id="GROUP11" class="ladi-element ladi-animation-hidden">
                         <div class="ladi-group">
                             <div id="HEADLINE24" class="ladi-element">
                                 <p class="ladi-headline ladi-transition">{{ currentSideConfig.firstFamily.title }}<br>
@@ -269,7 +269,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="GROUP10" class="ladi-element ladi-animation">
+                    <div id="GROUP10" class="ladi-element ladi-animation-hidden">
                         <div class="ladi-group">
                             <div id="HEADLINE22" class="ladi-element">
                                 <p class="ladi-headline ladi-transition">{{ currentSideConfig.secondFamily.title }}<br>
@@ -283,13 +283,13 @@
                     </div>
                     <div data-action="true" id="GROUP80" class="ladi-element ladi-animation-hidden">
                         <div class="ladi-group">
-                            <div id="HEADLINE29" class="ladi-element ladi-animation">
-                                <p class="ladi-headline ladi-transition">{{ currentSideConfig.event.venueTitle }}</p>
+                            <div id="HEADLINE29" class="ladi-element ladi-animation-hidden">
+                                <p class="ladi-headline ladi-transition" v-html="currentSideConfig.event.venueTitle.replace(/\n/g, '<br>')"></p>
                             </div>
-                            <div id="HEADLINE30" class="ladi-element ladi-animation">
+                            <div id="HEADLINE30" class="ladi-element ladi-animation-hidden">
                                 <p class="ladi-headline ladi-transition">{{ currentSideConfig.event.venueAddress }}</p>
                             </div><a :href="currentSideConfig.event.mapUrl" target="_blank" id="GROUP34"
-                                class="ladi-element ladi-animation" :data-replace-href="currentSideConfig.event.mapUrl">
+                                class="ladi-element ladi-animation-hidden" :data-replace-href="currentSideConfig.event.mapUrl">
                                 <div class="ladi-group">
                                     <div id="IMAGE47" class="ladi-element">
                                         <div class="ladi-image">
@@ -301,33 +301,33 @@
                                     </div>
                                 </div>
                             </a>
-                            <div id="HEADLINE21" class="ladi-element ladi-animation">
+                            <div id="HEADLINE21" class="ladi-element ladi-animation-hidden">
                                 <p class="ladi-headline ladi-transition">{{ currentSideConfig.partyLabel }}<br></p>
                             </div>
                             <div id="GROUP66" class="ladi-element">
                                 <div class="ladi-group">
-                                    <div id="HEADLINE26" class="ladi-element ladi-animation">
+                                    <div id="HEADLINE26" class="ladi-element ladi-animation-hidden">
                                         <p class="ladi-headline ladi-transition">{{ currentSideConfig.secondPersonName
                                         }}<br></p>
                                     </div>
-                                    <div id="HEADLINE27" class="ladi-element ladi-animation">
+                                    <div id="HEADLINE27" class="ladi-element ladi-animation-hidden">
                                         <p class="ladi-headline ladi-transition">{{ currentSideConfig.firstPersonName }}
                                         </p>
                                     </div>
-                                    <div id="HEADLINE28" class="ladi-element ladi-animation">
+                                    <div id="HEADLINE28" class="ladi-element ladi-animation-hidden">
                                         <p class="ladi-headline ladi-transition">&amp;<br></p>
                                     </div>
                                 </div>
                             </div>
-                            <div id="HEADLINE32" class="ladi-element ladi-animation">
+                            <div id="HEADLINE32" class="ladi-element ladi-animation-hidden">
                                 <p class="ladi-headline ladi-transition">Tổ chức tại</p>
                             </div>
                             <div id="GROUP14" class="ladi-element">
                                 <div class="ladi-group">
-                                    <div id="HEADLINE33" class="ladi-element ladi-animation">
+                                    <div id="HEADLINE33" class="ladi-element ladi-animation-hidden">
                                         <p class="ladi-headline ladi-transition">{{ currentSideConfig.event.day }}</p>
                                     </div>
-                                    <div id="GROUP15" class="ladi-element ladi-animation">
+                                    <div id="GROUP15" class="ladi-element ladi-animation-hidden">
                                         <div class="ladi-group">
                                             <div id="LINE1" class="ladi-element">
                                                 <div class="ladi-line">
@@ -345,7 +345,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="GROUP16" class="ladi-element ladi-animation">
+                                    <div id="GROUP16" class="ladi-element ladi-animation-hidden">
                                         <div class="ladi-group">
                                             <div id="LINE3" class="ladi-element">
                                                 <div class="ladi-line">
@@ -365,10 +365,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="HEADLINE36" class="ladi-element ladi-animation">
+                            <div id="HEADLINE36" class="ladi-element ladi-animation-hidden">
                                 <p class="ladi-headline ladi-transition">{{ currentSideConfig.event.time }}</p>
                             </div>
-                            <div id="HEADLINE37" class="ladi-element ladi-animation">
+                            <div id="HEADLINE37" class="ladi-element ladi-animation-hidden">
                                 <p class="ladi-headline ladi-transition">{{ currentSideConfig.event.lunarDate }}<br></p>
                             </div>
                         </div>
@@ -389,18 +389,18 @@
                                         <div class="ladi-group">
                                             <div id="GROUP25" class="ladi-element">
                                                 <div class="ladi-group">
-                                                    <div id="BOX28" class="ladi-element ladi-animation-hidden">
+                                                    <div id="BOX28" class="ladi-element ladi-animation-hidden" role="button" tabindex="0" title="Tone màu gợi ý: Trắng" @click="showToast('Dresscode gợi ý: Màu Trắng')">
                                                         <div class="ladi-box ladi-transition"></div>
                                                     </div>
-                                                    <div id="BOX29" class="ladi-element ladi-animation-hidden">
+                                                    <div id="BOX29" class="ladi-element ladi-animation-hidden" role="button" tabindex="0" title="Tone màu gợi ý: Be / Kem" @click="showToast('Dresscode gợi ý: Màu Be / Kem')">
                                                         <div class="ladi-box ladi-transition"></div>
                                                     </div>
-                                                    <div id="BOX30" class="ladi-element ladi-animation-hidden">
+                                                    <div id="BOX30" class="ladi-element ladi-animation-hidden" role="button" tabindex="0" title="Tone màu gợi ý: Hồng Pastel" @click="showToast('Dresscode gợi ý: Màu Hồng Pastel')">
                                                         <div class="ladi-box ladi-transition"></div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div id="BOX31" class="ladi-element ladi-animation-hidden">
+                                            <div id="BOX31" class="ladi-element ladi-animation-hidden" role="button" tabindex="0" title="Tone màu gợi ý: Nâu Tây" @click="showToast('Dresscode gợi ý: Màu Nâu Tây')">
                                                 <div class="ladi-box ladi-transition"></div>
                                             </div>
                                         </div>
@@ -491,7 +491,7 @@
                             <div class="ladi-image-background"></div>
                         </div>
                     </div>
-                    <div id="IMAGE27" class="ladi-element ladi-animation">
+                    <div id="IMAGE27" class="ladi-element ladi-animation-hidden">
                         <div class="ladi-image">
                             <div class="ladi-image-background"></div>
                         </div>
@@ -528,32 +528,32 @@
                     <div id="GROUP43" class="ladi-element">
                         <div class="ladi-group">
                             <div id="HEADLINE81" class="ladi-element">
-                                <h3 class="ladi-headline ladi-transition">December<br></h3>
+                                <h3 class="ladi-headline ladi-transition">Tháng Mười Hai<br></h3>
                             </div>
                             <div id="GROUP37" class="ladi-element">
                                 <div class="ladi-group">
                                     <div id="GROUP69" class="ladi-element">
                                         <div class="ladi-group">
                                             <div id="HEADLINE91" class="ladi-element">
-                                                <p class="ladi-headline ladi-transition">mon<br></p>
+                                                <p class="ladi-headline ladi-transition">THỨ HAI</p>
                                             </div>
                                             <div id="HEADLINE92" class="ladi-element">
-                                                <p class="ladi-headline ladi-transition">tue<br></p>
+                                                <p class="ladi-headline ladi-transition">THỨ BA</p>
                                             </div>
                                             <div id="HEADLINE93" class="ladi-element">
-                                                <p class="ladi-headline ladi-transition">wed</p>
+                                                <p class="ladi-headline ladi-transition">THỨ TƯ</p>
                                             </div>
                                             <div id="HEADLINE94" class="ladi-element">
-                                                <p class="ladi-headline ladi-transition">thur<br></p>
+                                                <p class="ladi-headline ladi-transition">THỨ NĂM</p>
                                             </div>
                                             <div id="HEADLINE95" class="ladi-element">
-                                                <p class="ladi-headline ladi-transition">fri<br></p>
+                                                <p class="ladi-headline ladi-transition">THỨ SÁU</p>
                                             </div>
                                             <div id="HEADLINE96" class="ladi-element">
-                                                <p class="ladi-headline ladi-transition">sat<br></p>
+                                                <p class="ladi-headline ladi-transition">THỨ BẢY</p>
                                             </div>
                                             <div id="HEADLINE97" class="ladi-element">
-                                                <p class="ladi-headline ladi-transition">sun<br></p>
+                                                <p class="ladi-headline ladi-transition">CHỦ NHẬT</p>
                                             </div>
                                         </div>
                                     </div>
@@ -567,7 +567,7 @@
                                     </div>
 
                                     <!-- Trái tim khoanh ngày cưới: Nhà trai (27/12/2026), Nhà gái (26/12/2026) -->
-                                    <div id="IMAGE33" class="ladi-element ladi-animation" :style="heartStyle">
+                                    <div id="IMAGE33" class="ladi-element ladi-animation-hidden" :style="heartStyle">
                                         <div class="ladi-image">
                                             <div class="ladi-image-background"></div>
                                         </div>
@@ -788,7 +788,7 @@
                             <div class="ladi-image-background"></div>
                         </div>
                     </div>
-                    <div id="HTML_CODE2" class="ladi-element">
+                    <div id="HTML_CODE2" class="ladi-element ladi-animation-hidden">
                         <div class="ladi-html-code">
                             <div id="jmii-wishes">
 
@@ -953,7 +953,6 @@
         <div id="backdrop-popup" class="backdrop-popup"></div>
         <div id="backdrop-dropbox" class="backdrop-dropbox"></div>
         <div id="lightbox-screen" class="lightbox-screen"></div>
-
     </div>
 </template>
 
@@ -985,47 +984,48 @@ const switchSide = (side: WeddingSide) => {
 }
 
 // Lịch Tháng 12/2026 (December 2026: 31 ngày, ngày 1 bắt đầu vào Thứ Ba)
+// 7 cột phân bổ đều tăm tắp với bước nhảy 47.7px (centers: 23.85, 71.55, 119.25, 166.95, 214.65, 262.35, 310.05)
 const calendarDays2026 = [
-    // Hàng 1 (top: 40.5px / 40.73px)
-    { day: 1, top: 40.5, left: 57.95 },
-    { day: 2, top: 40.5, left: 105.95 },
-    { day: 3, top: 40.5, left: 153.52 },
-    { day: 4, top: 40.5, left: 201.09 },
-    { day: 5, top: 40.73, left: 254.24 },
-    { day: 6, top: 40.73, left: 301.81 },
+    // Hàng 1 (top: 40.5px)
+    { day: 1, top: 40.5, left: 58.55 },
+    { day: 2, top: 40.5, left: 106.25 },
+    { day: 3, top: 40.5, left: 153.95 },
+    { day: 4, top: 40.5, left: 201.65 },
+    { day: 5, top: 40.5, left: 249.35 },
+    { day: 6, top: 40.5, left: 297.05 },
 
-    // Hàng 2 (top: 76.05px ~ 76.28px)
-    { day: 7, top: 76.05, left: 10.38 },
-    { day: 8, top: 76.05, left: 57.95 },
-    { day: 9, top: 76.14, left: 105.95 },
-    { day: 10, top: 76.14, left: 153.52 },
-    { day: 11, top: 76.14, left: 201.09 },
-    { day: 12, top: 76.28, left: 254.24 },
-    { day: 13, top: 76.28, left: 301.81 },
+    // Hàng 2 (top: 76.1px)
+    { day: 7, top: 76.1, left: 10.85 },
+    { day: 8, top: 76.1, left: 58.55 },
+    { day: 9, top: 76.1, left: 106.25 },
+    { day: 10, top: 76.1, left: 153.95 },
+    { day: 11, top: 76.1, left: 201.65 },
+    { day: 12, top: 76.1, left: 249.35 },
+    { day: 13, top: 76.1, left: 297.05 },
 
-    // Hàng 3 (top: 111.61px ~ 111.84px)
-    { day: 14, top: 111.61, left: 10.38 },
-    { day: 15, top: 111.61, left: 57.95 },
-    { day: 16, top: 111.77, left: 105.95 },
-    { day: 17, top: 111.77, left: 153.52 },
-    { day: 18, top: 111.77, left: 201.09 },
-    { day: 19, top: 111.84, left: 254.24 },
-    { day: 20, top: 111.84, left: 301.81 },
+    // Hàng 3 (top: 111.7px)
+    { day: 14, top: 111.7, left: 10.85 },
+    { day: 15, top: 111.7, left: 58.55 },
+    { day: 16, top: 111.7, left: 106.25 },
+    { day: 17, top: 111.7, left: 153.95 },
+    { day: 18, top: 111.7, left: 201.65 },
+    { day: 19, top: 111.7, left: 249.35 },
+    { day: 20, top: 111.7, left: 297.05 },
 
     // Hàng 4 (top: 147.4px)
-    { day: 21, top: 147.4, left: 10.38 },
-    { day: 22, top: 147.4, left: 57.95 },
-    { day: 23, top: 147.4, left: 105.95 },
-    { day: 24, top: 147.4, left: 153.52 },
-    { day: 25, top: 147.4, left: 201.09 },
-    { day: 26, top: 147.4, left: 254.24 }, // SAT - Nhà gái (26/12/2026)
-    { day: 27, top: 147.4, left: 301.81 }, // SUN - Nhà trai (27/12/2026)
+    { day: 21, top: 147.4, left: 10.85 },
+    { day: 22, top: 147.4, left: 58.55 },
+    { day: 23, top: 147.4, left: 106.25 },
+    { day: 24, top: 147.4, left: 153.95 },
+    { day: 25, top: 147.4, left: 201.65 },
+    { day: 26, top: 147.4, left: 249.35 }, // SAT - Nhà gái (26/12/2026)
+    { day: 27, top: 147.4, left: 297.05 }, // SUN - Nhà trai (27/12/2026)
 
-    // Hàng 5 (top: 182.72px)
-    { day: 28, top: 182.72, left: 10.38 },
-    { day: 29, top: 182.72, left: 57.95 },
-    { day: 30, top: 182.72, left: 105.95 },
-    { day: 31, top: 182.72, left: 153.52 }
+    // Hàng 5 (top: 182.7px)
+    { day: 28, top: 182.7, left: 10.85 },
+    { day: 29, top: 182.7, left: 58.55 },
+    { day: 30, top: 182.7, left: 106.25 },
+    { day: 31, top: 182.7, left: 153.95 }
 ]
 
 // Ngày cưới cần khoanh: Nhà gái -> 26, Nhà trai -> 27
@@ -1034,18 +1034,18 @@ const highlightedWeddingDay = computed(() => {
 })
 
 // Tọa độ định vị trái tim (#IMAGE33) quanh đúng ngày cưới theo từng bên:
-// - Nhà gái: 26/12/2026 (Thứ Bảy, Cột 6 - SAT) -> top: 142.82px, left: 249.25px
-// - Nhà trai: 27/12/2026 (Chủ Nhật, Cột 7 - SUN) -> top: 142.82px, left: 296.793px
+// - Nhà gái: 26/12/2026 (Thứ Bảy, Cột 6 - SAT) -> top: 142.82px, left: 244.41px
+// - Nhà trai: 27/12/2026 (Chủ Nhật, Cột 7 - SUN) -> top: 142.82px, left: 292.11px
 const heartStyle = computed(() => {
     if (currentSide.value === 'gai') {
         return {
             top: '142.82px',
-            left: '249.25px'
+            left: '244.41px'
         }
     }
     return {
         top: '142.82px',
-        left: '296.793px'
+        left: '292.11px'
     }
 })
 
@@ -1098,28 +1098,24 @@ const showToast = (msg: string) => {
     }, 2500)
 }
 
-// 1. Mobile Viewport Auto-scaling
+// 1. Mobile Viewport Auto-scaling for all mobile screens (iPhone SE 375px, 390px, 360px, etc.)
 const initViewport = () => {
     if (typeof window === 'undefined') return
-    const applyViewport = () => {
+    const applyScaling = () => {
         const w = window.innerWidth
-        let content = 'width=420, user-scalable=no, initial-scale=1.0'
-        if (w <= 480 && w > 0) {
+        const wraper = document.querySelector('.ladi-wraper') as HTMLElement | null
+        if (!wraper) return
+        if (w <= 420 && w > 0) {
             const scale = w / 420
-            content = 'width=420, user-scalable=no, initial-scale=' + scale + ', minimum-scale=' + scale + ', maximum-scale=' + scale
+            wraper.style.zoom = String(scale)
+        } else {
+            wraper.style.zoom = ''
         }
-        let vp = document.getElementById('viewport')
-        if (!vp) {
-            vp = document.createElement('meta')
-            vp.id = 'viewport'
-            vp.setAttribute('name', 'viewport')
-            document.head.appendChild(vp)
-        }
-        vp.setAttribute('content', content)
     }
 
-    applyViewport()
-    window.addEventListener('resize', applyViewport)
+    applyScaling()
+    window.addEventListener('resize', applyScaling)
+    window.addEventListener('orientationchange', applyScaling)
 }
 
 // 2. Audio Player Logic (iOS + Android + Desktop)
@@ -1243,7 +1239,6 @@ watch(currentSide, () => {
 })
 
 // 4. Smooth Hardware-Accelerated Scroll Animations ("Scroll đến đâu hiệu ứng chạy tới đó")
-let section2ScrollHandler: (() => void) | null = null
 let section2Observer: IntersectionObserver | null = null
 
 const initScrollAnimations = () => {
@@ -1274,42 +1269,30 @@ const initScrollAnimations = () => {
             el.classList.remove('ladi-animation-hidden')
             el.classList.add('ladi-animation')
         })
-        if (section2ScrollHandler) {
-            window.removeEventListener('scroll', section2ScrollHandler)
-            section2ScrollHandler = null
-        }
         if (section2Observer) {
             section2Observer.disconnect()
             section2Observer = null
         }
     }
 
-    // Trigger Section 2 with zero layout thrashing on first scroll
-    section2ScrollHandler = () => {
-        if (window.scrollY > 15) {
-            triggerSection2()
-        }
-    }
-    window.addEventListener('scroll', section2ScrollHandler, { passive: true })
-
     if ('IntersectionObserver' in window) {
         const sec2 = document.getElementById('SECTION2')
         if (sec2) {
             section2Observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting && window.scrollY > 15) {
+                    if (entry.isIntersecting) {
                         triggerSection2()
                     }
                 })
             }, {
                 root: null,
-                rootMargin: '0px 0px -40px 0px',
-                threshold: 0.05
+                rootMargin: '0px 0px -50px 0px',
+                threshold: 0.08
             })
             section2Observer.observe(sec2)
         }
 
-        // Trigger animation right as element enters visible screen for Sections 3 to 10
+        // Trigger animation right as element enters visible screen for Sections 3 to 11
         animationObserver = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1321,7 +1304,7 @@ const initScrollAnimations = () => {
             })
         }, {
             root: null,
-            rootMargin: '0px 0px -50px 0px',
+            rootMargin: '0px 0px -40px 0px',
             threshold: 0.08
         })
 
@@ -1329,7 +1312,7 @@ const initScrollAnimations = () => {
         document.querySelectorAll('.ladi-animation-hidden').forEach(el => {
             if (el.closest('#SECTION1') || el.closest('#SECTION2')) return
             const rect = el.getBoundingClientRect()
-            if (rect.top < window.innerHeight - 50 && rect.bottom > 0) {
+            if (rect.top < window.innerHeight - 40 && rect.bottom > 0) {
                 el.classList.remove('ladi-animation-hidden')
                 el.classList.add('ladi-animation')
             } else {
@@ -1344,9 +1327,13 @@ const initScrollAnimations = () => {
         })
     }
 
-    // Check immediately if page was reloaded already scrolled down
-    if (window.scrollY > 15) {
-        triggerSection2()
+    // Check immediately if page was reloaded already scrolled down past Section 2
+    const sec2 = document.getElementById('SECTION2')
+    if (sec2) {
+        const rect = sec2.getBoundingClientRect()
+        if (rect.top < window.innerHeight - 50 && rect.bottom > 0) {
+            triggerSection2()
+        }
     }
 }
 
@@ -1572,16 +1559,6 @@ const initPopupsAndActions = () => {
             window.open(currentSideConfig.value.event.mapUrl, '_blank')
         })
     }
-
-    // Gallery click to open POPUP3
-    const galleryItems = document.querySelectorAll('#SECTION7 .ladi-image')
-    galleryItems.forEach(item => {
-        (item as HTMLElement).style.cursor = 'pointer'
-        item.addEventListener('click', () => {
-            if (backdrop) backdrop.classList.add('is-active')
-            if (popup3) popup3.classList.add('is-active')
-        })
-    })
 }
 
 onMounted(() => {
@@ -1607,9 +1584,6 @@ onUnmounted(() => {
     if (section2Observer) {
         section2Observer.disconnect()
     }
-    if (section2ScrollHandler) {
-        window.removeEventListener('scroll', section2ScrollHandler)
-    }
 })
 </script>
 
@@ -1620,6 +1594,24 @@ onUnmounted(() => {
     display: flex;
     justify-content: center;
     background-color: #f0eae1;
+    overflow-x: hidden;
+}
+
+/* Tự động co giãn (responsive scale) chuẩn xác trên toàn bộ các dòng máy màn hình nhỏ (iPhone SE 375px, 360px, 390px...) */
+@media screen and (max-width: 420px) {
+    .wedding-root {
+        display: block !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+
+    .wedding-root :deep(.ladi-wraper) {
+        width: 420px !important;
+        margin: 0 auto !important;
+        transform-origin: top center;
+        zoom: calc(100vw / 420);
+    }
 }
 
 .fade-enter-active,
@@ -1728,9 +1720,17 @@ onUnmounted(() => {
     font-size: 11px;
 }
 
-/* Tùy biến lời mời khách (HEADLINE7) & Bông hoa lan (IMAGE15) */
+/* Tùy biến phân lớp Section 2 & Các bông hoa lan (#IMAGE15, #IMAGE17, #IMAGE18) */
+:deep(#IMAGE2) {
+    z-index: 1 !important;
+}
+
+:deep(#IMAGE4) {
+    z-index: 2 !important;
+}
+
 :deep(#GROUP6) {
-    z-index: 4 !important;
+    z-index: 3 !important;
 }
 
 :deep(#GROUP6 > .ladi-group > .ladi-element) {
@@ -1741,17 +1741,33 @@ onUnmounted(() => {
     z-index: 1 !important;
 }
 
-:deep(#IMAGE15) {
-    top: -17px !important;
-    left: 204.469px !important;
+:deep(#IMAGE13) {
     z-index: 5 !important;
 }
 
-:deep(#IMAGE15 > .ladi-image) {
-    animation: none !important;
-    -webkit-animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
+:deep(#IMAGE8) {
+    z-index: 6 !important;
+}
+
+:deep(#IMAGE14) {
+    z-index: 7 !important;
+}
+
+:deep(#GROUP7) {
+    z-index: 10 !important;
+}
+
+:deep(#IMAGE15) {
+    top: 96.8px !important;
+    left: 284.828px !important;
+    width: 72.3364px !important;
+    height: 64.8274px !important;
+    z-index: 30 !important;
+}
+
+:deep(#IMAGE17),
+:deep(#IMAGE18) {
+    z-index: 30 !important;
 }
 
 :deep(#HEADLINE7) {
@@ -1798,17 +1814,7 @@ onUnmounted(() => {
     z-index: 12 !important;
 }
 
-:deep(#IMAGE8) {
-    z-index: 15 !important;
-}
 
-:deep(#IMAGE14) {
-    z-index: 16 !important;
-}
-
-:deep(#GROUP7) {
-    z-index: 20 !important;
-}
 
 :deep(#GROUP10),
 :deep(#GROUP11) {
@@ -1827,22 +1833,23 @@ onUnmounted(() => {
 }
 
 :deep(#HEADLINE29) {
-    top: 450px !important;
+    top: 446px !important;
     width: 380px !important;
     left: 35px !important;
 }
 
 :deep(#HEADLINE29 > .ladi-headline) {
-    font-size: 17.5px !important;
+    font-size: 17px !important;
     line-height: 1.35 !important;
     text-transform: uppercase !important;
     color: rgb(146, 131, 98) !important;
     text-align: center !important;
     letter-spacing: 0.3px;
+    white-space: pre-line !important;
 }
 
 :deep(#HEADLINE30) {
-    top: 498px !important;
+    top: 504px !important;
     width: 380px !important;
     left: 35px !important;
 }
@@ -1856,10 +1863,20 @@ onUnmounted(() => {
 }
 
 :deep(#GROUP34) {
-    top: 546px !important;
+    top: 554px !important;
 }
 
 /* --- SECTION 5: LỊCH TRÌNH BUỔI TIỆC & MÀU SẮC TRANG PHỤC --- */
+:deep(#GROUP51) {
+    left: 0px !important;
+    width: 420px !important;
+}
+
+:deep(#GROUP73) {
+    left: 32px !important;
+    width: 356px !important;
+}
+
 :deep(#GROUP36) {
     top: 15px !important;
     left: 12px !important;
@@ -1936,12 +1953,34 @@ onUnmounted(() => {
     left: 105px !important;
 }
 
+:deep(#BOX28),
+:deep(#BOX29),
+:deep(#BOX30),
+:deep(#BOX31) {
+    cursor: pointer !important;
+}
+
 :deep(#BOX28 > .ladi-box),
 :deep(#BOX29 > .ladi-box),
 :deep(#BOX30 > .ladi-box),
 :deep(#BOX31 > .ladi-box) {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
     border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+    cursor: pointer !important;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease !important;
+}
+
+:deep(#BOX28:hover > .ladi-box),
+:deep(#BOX29:hover > .ladi-box),
+:deep(#BOX30:hover > .ladi-box),
+:deep(#BOX31:hover > .ladi-box),
+:deep(#BOX28:active > .ladi-box),
+:deep(#BOX29:active > .ladi-box),
+:deep(#BOX30:active > .ladi-box),
+:deep(#BOX31:active > .ladi-box) {
+    transform: scale(1.22) translateY(-4px) !important;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45) !important;
+    z-index: 10 !important;
 }
 
 /* --- TRỤC DỌC & CÁC MỐC TIMELINE DÀN ĐỀU, THOÁNG ĐÃNG (TRỤC X = 175.0px, BỀ RỘNG 280px) --- */
@@ -2146,6 +2185,72 @@ onUnmounted(() => {
 }
 
 /* Lịch Tháng 12/2026 */
+:deep(#GROUP43) {
+    left: 43px !important;
+    width: 334px !important;
+}
+
+:deep(#HEADLINE81) {
+    width: 334px !important;
+    left: 0px !important;
+    top: 0px !important;
+}
+
+:deep(#HEADLINE81 > .ladi-headline) {
+    font-family: 'MUZUViWSVAtQXJjaXReWEtQmVnYXRyaSvdGY', 'MUZUViWSVAtSElHSCTUElSSVRFRCPVEY', cursive !important;
+    font-size: 38px !important;
+    line-height: 1.35 !important;
+    color: rgb(146, 131, 98) !important;
+    text-align: center !important;
+    letter-spacing: 0.5px !important;
+}
+
+:deep(#GROUP69) {
+    width: 334px !important;
+    height: 22px !important;
+    top: 0px !important;
+    left: 0px !important;
+}
+
+:deep(#HEADLINE91),
+:deep(#HEADLINE92),
+:deep(#HEADLINE93),
+:deep(#HEADLINE94),
+:deep(#HEADLINE95),
+:deep(#HEADLINE96),
+:deep(#HEADLINE97) {
+    width: 47.7px !important;
+    height: 22px !important;
+    top: 0px !important;
+    text-align: center !important;
+}
+
+:deep(#HEADLINE91) { left: 0px !important; }
+:deep(#HEADLINE92) { left: 47.7px !important; }
+:deep(#HEADLINE93) { left: 95.4px !important; }
+:deep(#HEADLINE94) { left: 143.1px !important; }
+:deep(#HEADLINE95) { left: 190.8px !important; }
+:deep(#HEADLINE96) { left: 238.5px !important; }
+:deep(#HEADLINE97) { left: 286.2px !important; }
+
+:deep(#HEADLINE91 > .ladi-headline),
+:deep(#HEADLINE92 > .ladi-headline),
+:deep(#HEADLINE93 > .ladi-headline),
+:deep(#HEADLINE94 > .ladi-headline),
+:deep(#HEADLINE95 > .ladi-headline),
+:deep(#HEADLINE96 > .ladi-headline),
+:deep(#HEADLINE97 > .ladi-headline) {
+    font-family: 'TESQSSRUdVTEFSLlRURg', 'Lora', serif !important;
+    font-size: 8px !important;
+    font-weight: 500 !important;
+    line-height: 22px !important;
+    color: rgb(146, 131, 98) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+}
+
 :deep(.calendar-day-number) {
     width: 26px !important;
 }
@@ -2171,10 +2276,15 @@ onUnmounted(() => {
     transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1), top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Header Album: KHOẢNH KHẮC của YÊU THƯƠNG & Căn chỉnh khoảng cách Album */
-:deep(#GROUP31) {
+/* Header Album & các ảnh trong SECTION7 căn tâm chuẩn đối xứng */
+:deep(#SECTION7 #GROUP75),
+:deep(#SECTION7 #BOX14),
+:deep(#SECTION7 #GROUP31) {
+    left: 0px !important;
     width: 420px !important;
-    left: 0 !important;
+}
+
+:deep(#GROUP31) {
     top: 26px !important;
     height: 46px !important;
 }
@@ -2219,26 +2329,35 @@ onUnmounted(() => {
     transform: translateY(-2px) !important;
 }
 
-/* Đôn toàn bộ các khung ảnh trong SECTION7 lên sau khi bỏ text giới thiệu */
+/* Đôn toàn bộ các khung ảnh trong SECTION7 lên sau khi bỏ text giới thiệu và căn tâm đối xứng */
 :deep(#BOX42) {
     top: 96px !important;
+    left: 20.5px !important;
 }
 
-:deep(#BOX43),
+:deep(#BOX43) {
+    top: 364px !important;
+    left: 20.5px !important;
+}
+
 :deep(#BOX44) {
     top: 364px !important;
+    left: 255.5px !important;
 }
 
 :deep(#BOX45) {
     top: 561px !important;
+    left: 255.5px !important;
 }
 
 :deep(#GROUP68) {
     top: 760px !important;
+    left: 20.5px !important;
 }
 
 :deep(#GROUP67) {
     top: 1016px !important;
+    left: 20.5px !important;
 }
 
 :deep(#SECTION7),
@@ -2303,6 +2422,10 @@ onUnmounted(() => {
     height: auto !important;
 }
 
+:deep(#HTML_CODE2.ladi-animation) {
+    animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both !important;
+}
+
 :deep(#jmii-wishes) {
     width: 100% !important;
     height: auto !important;
@@ -2326,6 +2449,21 @@ onUnmounted(() => {
 /* Đóng gọn footer SECTION9 sau khi bỏ thanh link mạng xã hội / logo */
 :deep(#SECTION9) {
     height: 318px !important;
+}
+
+:deep(#HEADLINE130) {
+    width: 280px !important;
+    left: 32px !important;
+}
+
+:deep(#HEADLINE130 > .ladi-headline) {
+    font-family: 'VVZOSGhVGFMSdGY', 'Great Vibes', 'Playball', 'Lora', cursive, serif !important;
+    font-size: 39px !important;
+    line-height: 1.3 !important;
+    color: #ffffff !important;
+    text-align: center !important;
+    font-style: italic !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45) !important;
 }
 
 @media (max-width: 380px) {

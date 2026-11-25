@@ -158,7 +158,7 @@ export const weddingSides: Record<WeddingSide, SideSpecificConfig> = {
       time: '10:30, CHỦ NHẬT',
       formattedDate: 'Chủ Nhật, ngày 27 tháng 12 năm 2026',
       lunarDate: '(19 THÁNG 11 NĂM BÍNH NGỌ)',
-      venueTitle: 'SẢNH SAPPHIRE, TRUNG TÂM TIỆC CƯỚI ÂU CƠ',
+      venueTitle: 'SẢNH SAPPHIRE,<br>TRUNG TÂM TIỆC CƯỚI ÂU CƠ',
       venueAddress: 'SỐ 1A, ĐƯỜNG NGUYỄN HỮU CẦU, PHƯỜNG HẢI DƯƠNG, TP. HẢI PHÒNG',
       mapUrl: 'https://maps.app.goo.gl/8nEB8VrL8uGrgUmC6'
     },
