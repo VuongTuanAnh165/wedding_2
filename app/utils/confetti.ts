@@ -44,7 +44,7 @@ export function fireConfetti() {
       y: height * 0.45 + (Math.random() - 0.5) * 80,
       w: Math.random() * 8 + 6,
       h: Math.random() * 6 + 4,
-      color: colors[Math.floor(Math.random() * colors.length)],
+      color: colors[Math.floor(Math.random() * colors.length)] || '#c29d59',
       vx: (Math.random() - 0.5) * 12,
       vy: Math.random() * -12 - 5,
       rotation: Math.random() * 360,

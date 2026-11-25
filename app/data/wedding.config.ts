@@ -12,6 +12,19 @@ export interface FamilyInfo {
   mother: string
 }
 
+export interface BankAccount {
+  title: string
+  accountHolder: string
+  bankName: string
+  accountNumber: string
+  qrImage?: string
+}
+
+export interface SwatchColor {
+  name: string
+  hex: string
+}
+
 export interface SideSpecificConfig {
   sideName: string
   invitationTitle: string
@@ -41,13 +54,7 @@ export interface SideSpecificConfig {
     venueAddress: string
     mapUrl: string
   }
-  banking: {
-    title: string
-    accountHolder: string
-    bankName: string
-    accountNumber: string
-    qrImage?: string
-  }
+  banking: BankAccount
   meta: {
     title: string
     description: string
@@ -244,14 +251,17 @@ export function resolveWeddingSide(rawParam?: unknown): WeddingSide {
 
 /**
  * Định dạng dòng chữ lời mời khách ở thiệp trong phong bì (HEADLINE7)
- * Cấu trúc: "TRÂN TRỌNG KÍNH MỜI ... ĐẾN DỰ [LỄ CƯỚI / LỄ ĂN HỎI] CỦA"
- * - Nhà gái: LỄ ĂN HỎI
- * - Nhà trai: LỄ CƯỚI
- * Chỗ ... sẽ được thay thế bằng tên khách mời lấy từ param URL (?to=, ?guest=, ?name=, ?khach=)
- * Mặc định khi không truyền param: 'QUÝ KHÁCH'
+ * Cấu trúc 3 dòng riêng biệt:
+ * Dòng 1: Trân trọng kính mời
+ * Dòng 2: “Tên khách” (hoặc “Quý khách” khi không có param URL)
+ * Dòng 3: Đến dự lễ cưới của
  */
 export function formatInvitationLead(guestName?: string, side: WeddingSide = 'trai'): string {
-  const name = guestName && guestName.trim() ? guestName.trim() : 'QUÝ KHÁCH'
-  const eventName = side === 'gai' ? 'LỄ ĂN HỎI' : 'LỄ CƯỚI'
-  return `TRÂN TRỌNG KÍNH MỜI <span class="guest-name-highlight">${name}</span><br>ĐẾN DỰ ${eventName} CỦA`
+  const raw = guestName ? guestName.trim() : ''
+  const clean = raw.replace(/^["“'”«]+|["“'”»]+$/g, '').trim()
+  const name = clean
+    ? clean.split(/\s+/).map(w => (w ? w.charAt(0).toUpperCase() + w.slice(1) : '')).join(' ')
+    : 'Quý khách'
+
+  return `Trân trọng kính mời<br><span class="guest-name-highlight">${name}</span><br>Đến dự lễ cưới của`
 }

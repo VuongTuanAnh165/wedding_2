@@ -23,7 +23,7 @@
           />
           
           <div v-if="photos[currentIndex]?.caption" class="lightbox-caption font-serif">
-            {{ photos[currentIndex].caption }}
+            {{ photos[currentIndex]?.caption }}
           </div>
 
           <!-- Counter -->
@@ -96,16 +96,22 @@ const next = () => {
 let touchStartX = 0
 
 const handleTouchStart = (e: TouchEvent) => {
-  touchStartX = e.changedTouches[0].screenX
+  const touch = e.changedTouches[0]
+  if (touch) {
+    touchStartX = touch.screenX
+  }
 }
 
 const handleTouchEnd = (e: TouchEvent) => {
-  const touchEndX = e.changedTouches[0].screenX
-  const diff = touchEndX - touchStartX
-  if (diff > 50) {
-    prev() // Swipe right
-  } else if (diff < -50) {
-    next() // Swipe left
+  const touch = e.changedTouches[0]
+  if (touch) {
+    const touchEndX = touch.screenX
+    const diff = touchEndX - touchStartX
+    if (diff > 50) {
+      prev() // Swipe right
+    } else if (diff < -50) {
+      next() // Swipe left
+    }
   }
 }
 

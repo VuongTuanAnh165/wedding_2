@@ -101,7 +101,7 @@
                                     </div>
                                     <div id="HEADLINE9" class="ladi-element ladi-animation">
                                         <p class="ladi-headline ladi-transition">{{ currentSideConfig.secondPersonName
-                                            }}<br></p>
+                                        }}<br></p>
                                     </div>
                                     <div id="HEADLINE10" class="ladi-element ladi-animation">
                                         <p class="ladi-headline ladi-transition">&amp;<br></p>
@@ -124,13 +124,13 @@
                                                                 data-item-type="day">
                                                                 <div class="ladi-countdown-background"></div>
                                                                 <div class="ladi-countdown-text"><span>{{ countdownDays
-                                                                }}</span></div>
+                                                                        }}</span></div>
                                                             </div>
                                                             <div id="COUNTDOWN_ITEM6" class="ladi-element"
                                                                 data-item-type="hour">
                                                                 <div class="ladi-countdown-background"></div>
                                                                 <div class="ladi-countdown-text"><span>{{ countdownHours
-                                                                }}</span></div>
+                                                                        }}</span></div>
                                                             </div>
                                                             <div id="COUNTDOWN_ITEM7" class="ladi-element"
                                                                 data-item-type="minute">
@@ -173,7 +173,7 @@
                                     </div>
                                     <div id="HEADLINE8" class="ladi-element ladi-animation">
                                         <p class="ladi-headline ladi-transition">{{ currentSideConfig.firstPersonName
-                                            }}<br></p>
+                                        }}<br></p>
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +265,7 @@
                             </div>
                             <div id="HEADLINE25" class="ladi-element">
                                 <p class="ladi-headline ladi-transition">{{ currentSideConfig.firstFamily.father
-                                }}<br>{{ currentSideConfig.firstFamily.mother }}<br></p>
+                                    }}<br>{{ currentSideConfig.firstFamily.mother }}<br></p>
                             </div>
                         </div>
                     </div>
@@ -277,7 +277,7 @@
                             </div>
                             <div id="HEADLINE23" class="ladi-element">
                                 <p class="ladi-headline ladi-transition">{{ currentSideConfig.secondFamily.father
-                                }}<br>{{ currentSideConfig.secondFamily.mother }}<br></p>
+                                    }}<br>{{ currentSideConfig.secondFamily.mother }}<br></p>
                             </div>
                         </div>
                     </div>
@@ -308,7 +308,7 @@
                                 <div class="ladi-group">
                                     <div id="HEADLINE26" class="ladi-element ladi-animation">
                                         <p class="ladi-headline ladi-transition">{{ currentSideConfig.secondPersonName
-                                            }}<br></p>
+                                        }}<br></p>
                                     </div>
                                     <div id="HEADLINE27" class="ladi-element ladi-animation">
                                         <p class="ladi-headline ladi-transition">{{ currentSideConfig.firstPersonName }}
@@ -354,7 +354,7 @@
                                             </div>
                                             <div id="HEADLINE35" class="ladi-element">
                                                 <p class="ladi-headline ladi-transition">{{ currentSideConfig.event.year
-                                                    }}<br></p>
+                                                }}<br></p>
                                             </div>
                                             <div id="LINE4" class="ladi-element">
                                                 <div class="ladi-line">
@@ -419,10 +419,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="GROUP36" class="ladi-element ladi-animation">
+                            <div id="GROUP36" class="ladi-element ladi-animation-hidden">
                                 <div class="ladi-group">
                                     <div id="HEADLINE38" class="ladi-element">
-                                        <p class="ladi-headline ladi-transition">{{ currentSideConfig.timelineTitle || 'Lịch trình buổi tiệc' }}<br></p>
+                                        <p class="ladi-headline ladi-transition">{{ currentSideConfig.timelineTitle ||
+                                            'Lịch trình buổi tiệc' }}<br></p>
                                     </div>
                                     <div id="LINE10" class="ladi-element">
                                         <div class="ladi-line">
@@ -431,42 +432,51 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="IMAGE24" class="ladi-element ladi-animation">
+                            <div id="IMAGE24" class="ladi-element ladi-animation-hidden">
                                 <div class="ladi-image">
                                     <div class="ladi-image-background"></div>
                                 </div>
                             </div>
-                            <div id="HEADLINE39" class="ladi-element ladi-animation">
-                                <p class="ladi-headline ladi-transition">{{ currentSideConfig.timeline[0]?.time }}<br>{{ currentSideConfig.timeline[0]?.title }}</p>
+                            <div id="HEADLINE39" class="ladi-element ladi-animation-hidden">
+                                <p class="ladi-headline ladi-transition">
+                                    <span class="timeline-time">{{ currentSideConfig.timeline[0]?.time }}</span>
+                                    <span class="timeline-title">{{ currentSideConfig.timeline[0]?.title }}</span>
+                                </p>
                             </div>
-                            <div id="IMAGE25" class="ladi-element ladi-animation">
+                            <div id="IMAGE25" class="ladi-element ladi-animation-hidden">
                                 <div class="ladi-image">
                                     <div class="ladi-image-background"></div>
                                 </div>
                             </div>
-                            <div id="HEADLINE40" class="ladi-element ladi-animation">
-                                <p class="ladi-headline ladi-transition">{{ currentSideConfig.timeline[1]?.time }}<br>{{ currentSideConfig.timeline[1]?.title }}</p>
+                            <div id="HEADLINE40" class="ladi-element ladi-animation-hidden">
+                                <p class="ladi-headline ladi-transition">
+                                    <span class="timeline-time">{{ currentSideConfig.timeline[1]?.time }}</span>
+                                    <span class="timeline-title">{{ currentSideConfig.timeline[1]?.title }}</span>
+                                </p>
                             </div>
-                            <div id="IMAGE48" class="ladi-element ladi-animation">
+                            <div id="IMAGE48" class="ladi-element ladi-animation-hidden">
                                 <div class="ladi-image">
                                     <div class="ladi-image-background"></div>
                                 </div>
                             </div>
-                            <div id="HEADLINE146" class="ladi-element ladi-animation">
-                                <p class="ladi-headline ladi-transition">{{ currentSideConfig.timeline[2]?.time }}<br>{{ currentSideConfig.timeline[2]?.title }}<br></p>
+                            <div id="HEADLINE146" class="ladi-element ladi-animation-hidden">
+                                <p class="ladi-headline ladi-transition">
+                                    <span class="timeline-time">{{ currentSideConfig.timeline[2]?.time }}</span>
+                                    <span class="timeline-title">{{ currentSideConfig.timeline[2]?.title }}</span>
+                                </p>
                             </div>
-                            <div id="LINE5" class="ladi-element">
+                            <div id="LINE5" class="ladi-element ladi-animation-hidden">
                                 <div class="ladi-line">
                                     <div class="ladi-line-container"></div>
                                 </div>
                             </div>
-                            <div id="BOX50" class="ladi-element">
+                            <div id="BOX50" class="ladi-element ladi-animation-hidden">
                                 <div class="ladi-box ladi-transition"></div>
                             </div>
-                            <div id="BOX9" class="ladi-element">
+                            <div id="BOX9" class="ladi-element ladi-animation-hidden">
                                 <div class="ladi-box ladi-transition"></div>
                             </div>
-                            <div id="BOX10" class="ladi-element">
+                            <div id="BOX10" class="ladi-element ladi-animation-hidden">
                                 <div class="ladi-box ladi-transition"></div>
                             </div>
                         </div>
@@ -487,7 +497,9 @@
                         </div>
                     </div>
                     <div id="HEADLINE41" class="ladi-element ladi-animation-hidden">
-                        <p class="ladi-headline ladi-transition">Từ hai người xa lạ, chúng mình dần trở thành một nửa của nhau qua những điều giản dị mỗi ngày. Giờ đây, khi hành trình mới sắp bắt đầu, chúng mình muốn có những người thân thương ở bên để cùng chia sẻ niềm vui này.<br>
+                        <p class="ladi-headline ladi-transition">Từ hai người xa lạ, chúng mình dần trở thành một nửa
+                            của nhau qua những điều giản dị mỗi ngày. Giờ đây, khi hành trình mới sắp bắt đầu, chúng
+                            mình muốn có những người thân thương ở bên để cùng chia sẻ niềm vui này.<br>
                         </p>
                     </div>
                     <div id="IMAGE28" class="ladi-element">
@@ -503,7 +515,7 @@
                     <div id="HEADLINE42" class="ladi-element ladi-animation-hidden">
                         <p class="ladi-headline ladi-transition">Hôm nay là ngày chúng mình cùng nắm tay<br>&nbsp;bước
                             vào
-                            hành trình mới - 
+                            hành trình mới -
                             hành trình<br>của yêu thương và sẻ chia.
                             <br>
                         </p>
@@ -684,13 +696,16 @@
                         <div class="ladi-group">
                             <div id="FORM2" is_auto_funnel="" data-config-id="68fefd387d9c4b005c27bfff"
                                 class="ladi-element ladi-animation-hidden">
-                                <form autocomplete="off" method="post" class="ladi-form" @submit.prevent="submitWishForm">
-                                    <div id="BUTTON2" class="ladi-element ladi-animation-hidden" role="button" tabindex="0" @click.stop="submitWishForm">
+                                <form autocomplete="off" method="post" class="ladi-form"
+                                    @submit.prevent="submitWishForm">
+                                    <div id="BUTTON2" class="ladi-element ladi-animation-hidden" role="button"
+                                        tabindex="0" @click.stop="submitWishForm">
                                         <div class="ladi-button ladi-transition"
-                                            :class="{ 'is-loading': isSubmittingWish }"
-                                            @click.stop="submitWishForm" @keydown.enter.stop="submitWishForm">
+                                            :class="{ 'is-loading': isSubmittingWish }" @click.stop="submitWishForm"
+                                            @keydown.enter.stop="submitWishForm">
                                             <div class="ladi-button-background"></div>
-                                            <div id="BUTTON_TEXT2" class="ladi-element ladi-button-headline" @click.stop="submitWishForm">
+                                            <div id="BUTTON_TEXT2" class="ladi-element ladi-button-headline"
+                                                @click.stop="submitWishForm">
                                                 <p class="ladi-headline ladi-transition">
                                                     {{ isSubmittingWish ? 'ĐANG GỬI...' : 'GỬI LỜI NHẮN & xác nhận' }}
                                                 </p>
@@ -701,23 +716,26 @@
                                         <div class="ladi-form-item-container">
                                             <div class="ladi-form-item-background"></div>
                                             <div class="ladi-form-item"><input autocomplete="off" tabindex="1"
-                                                    ref="nameInputRef" name="name" required="" class="ladi-form-control" type="text"
-                                                    placeholder="Tên của bạn" v-model="wishForm.name"></div>
+                                                    ref="nameInputRef" name="name" required class="ladi-form-control"
+                                                    type="text" placeholder="Tên của bạn" v-model="wishForm.name"></div>
                                         </div>
                                     </div>
                                     <div id="FORM_ITEM3" class="ladi-element">
                                         <div class="ladi-form-item-container">
                                             <div class="ladi-form-item-background"></div>
                                             <div class="ladi-form-item"><textarea autocomplete="off" tabindex="2"
-                                                    ref="messageInputRef" name="message" required="" class="ladi-form-control"
-                                                    placeholder="Gửi lời nhắn đến cô dâu chú rể" v-model="wishForm.message"></textarea></div>
+                                                    ref="messageInputRef" name="message" required
+                                                    class="ladi-form-control"
+                                                    placeholder="Gửi lời nhắn đến cô dâu chú rể"
+                                                    v-model="wishForm.message"></textarea></div>
                                         </div>
                                     </div>
                                     <div id="FORM_ITEM4" class="ladi-element">
                                         <div class="ladi-form-item-container">
                                             <div class="ladi-form-item-background"></div>
                                             <div class="ladi-form-item"><select tabindex="3" name="form_item7"
-                                                    class="ladi-form-control ladi-form-control-select" v-model="wishForm.attending">
+                                                    class="ladi-form-control ladi-form-control-select"
+                                                    v-model="wishForm.attending">
                                                     <option value="">Bạn sẽ đến chứ?</option>
                                                     <option value="Mình chắc chắn sẽ đến">Mình chắc chắn sẽ đến</option>
                                                     <option value="Xin lỗi mình bận rồi!">Xin lỗi mình bận rồi!</option>
@@ -728,7 +746,8 @@
                                         <div class="ladi-form-item-container">
                                             <div class="ladi-form-item-background"></div>
                                             <div class="ladi-form-item"><select tabindex="4" name="form_item8"
-                                                    class="ladi-form-control ladi-form-control-select" v-model="wishForm.guestCount">
+                                                    class="ladi-form-control ladi-form-control-select"
+                                                    v-model="wishForm.guestCount">
                                                     <option value="">Bạn tham dự cùng ai?</option>
                                                     <option value="1 người">1 người</option>
                                                     <option value="2 người">2 người</option>
@@ -741,13 +760,15 @@
                                         <div class="ladi-form-item-container">
                                             <div class="ladi-form-item-background"></div>
                                             <div class="ladi-form-item"><select tabindex="5" name="form_item9"
-                                                    class="ladi-form-control ladi-form-control-select" v-model="wishForm.side">
+                                                    class="ladi-form-control ladi-form-control-select"
+                                                    v-model="wishForm.side">
                                                     <option value="">Bạn là khách mời của ai?</option>
                                                     <option value="Khách mời cô dâu">Khách mời cô dâu</option>
                                                     <option value="Khách mời chú rể">Khách mời chú rể</option>
                                                 </select></div>
                                         </div>
-                                    </div><button type="submit" class="ladi-hidden" :disabled="isSubmittingWish"></button>
+                                    </div><button type="submit" class="ladi-hidden"
+                                        :disabled="isSubmittingWish"></button>
                                 </form>
                             </div>
                         </div>
@@ -803,20 +824,24 @@
                                         </div>
                                         <div class="empty-title">Hãy là người đầu tiên gửi gắm yêu thương!</div>
                                         <div class="empty-desc">
-                                            Hòm thư của cô dâu &amp; chú rể đang mong chờ những lời chúc ngọt ngào từ bạn. Hãy là người mở đầu cho cuốn sổ lưu bút ý nghĩa này nhé! 💕
+                                            Hòm thư của cô dâu &amp; chú rể đang mong chờ những lời chúc ngọt ngào từ
+                                            bạn. Hãy là người mở đầu cho cuốn sổ lưu bút ý nghĩa này nhé! 💕
                                         </div>
                                         <button type="button" class="empty-action-btn" @click="focusWishForm">
                                             <span class="btn-pen">✍️</span> Gửi lời chúc ngay
                                         </button>
                                         <div class="empty-quick-wishes">
                                             <div class="quick-chip-label">✨ Gợi ý lời chúc nhanh:</div>
-                                            <button type="button" class="quick-chip" @click="pickQuickWish('Chúc hai bạn trăm năm hạnh phúc, đầu bạc răng long! 💍')">
+                                            <button type="button" class="quick-chip"
+                                                @click="pickQuickWish('Chúc hai bạn trăm năm hạnh phúc, đầu bạc răng long! 💍')">
                                                 "Trăm năm hạnh phúc! 💍"
                                             </button>
-                                            <button type="button" class="quick-chip" @click="pickQuickWish('Chúc tân lang tân nương mãi ngọt ngào và hạnh phúc viên mãn! ❤️')">
+                                            <button type="button" class="quick-chip"
+                                                @click="pickQuickWish('Chúc tân lang tân nương mãi ngọt ngào và hạnh phúc viên mãn! ❤️')">
                                                 "Mãi ngọt ngào như ngày đầu! ❤️"
                                             </button>
-                                            <button type="button" class="quick-chip" @click="pickQuickWish('Mừng ngày chung đôi! Chúc hai bạn cùng nhau xây tổ ấm thật rực rỡ! 🥂')">
+                                            <button type="button" class="quick-chip"
+                                                @click="pickQuickWish('Mừng ngày chung đôi! Chúc hai bạn cùng nhau xây tổ ấm thật rực rỡ! 🥂')">
                                                 "Mừng ngày chung đôi! 🥂"
                                             </button>
                                         </div>
@@ -827,10 +852,12 @@
                                         <div v-for="item in wishes" :key="item.id" class="jmii-wish animate-wish">
                                             <div class="jmii-wish-header">
                                                 <div class="jmii-name">{{ item.name }}</div>
-                                                <span v-if="item.side" class="jmii-side-badge" :class="item.side.includes('chú rể') ? 'groom-badge' : 'bride-badge'">
+                                                <span v-if="item.side" class="jmii-side-badge"
+                                                    :class="item.side.includes('chú rể') ? 'groom-badge' : 'bride-badge'">
                                                     {{ item.side.includes('chú rể') ? 'Nhà trai' : 'Nhà gái' }}
                                                 </span>
-                                                <span v-if="item.attending && item.attending.includes('sẽ đến')" class="jmii-attend-badge">
+                                                <span v-if="item.attending && item.attending.includes('sẽ đến')"
+                                                    class="jmii-attend-badge">
                                                     ✓ Tham dự
                                                 </span>
                                                 <span class="jmii-time">{{ formatWishTime(item.createdAt) }}</span>
@@ -868,7 +895,7 @@
                                     cùng bạn chia sẻ niềm hạnh phúc trong ngày trọng đại này.</h2>
                             </div>
                             <div id="HEADLINE130" class="ladi-element ladi-animation-hidden">
-                                <h3 class="ladi-headline ladi-transition">Thank you!<br></h3>
+                                <h3 class="ladi-headline ladi-transition">Xin chân thành cảm ơn!<br></h3>
                             </div>
                         </div>
                     </div>
@@ -1730,15 +1757,15 @@ onUnmounted(() => {
 :deep(#HEADLINE7) {
     width: 236px !important;
     left: 12.469px !important;
-    top: 22px !important;
+    top: 13px !important;
     z-index: 12 !important;
 }
 
 :deep(#HEADLINE7 > .ladi-headline) {
     font-size: 10px !important;
-    line-height: 1.4 !important;
-    letter-spacing: 0.4px !important;
-    text-transform: uppercase !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.3px !important;
+    text-transform: none !important;
     color: rgb(146, 131, 98) !important;
     text-align: center !important;
     position: relative !important;
@@ -1761,12 +1788,12 @@ onUnmounted(() => {
 }
 
 :deep(.guest-name-highlight) {
-    font-weight: 700;
-    color: #796139;
-    letter-spacing: 0.6px;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    text-decoration-color: rgba(146, 131, 98, 0.4);
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: #705628 !important;
+    letter-spacing: 0.5px !important;
+    display: inline-block;
+    padding: 1px 0;
     position: relative !important;
     z-index: 12 !important;
 }
@@ -1832,129 +1859,267 @@ onUnmounted(() => {
     top: 546px !important;
 }
 
-/* Timeline / Lịch trình buổi tiệc */
-:deep(#GROUP36),
-:deep(#HEADLINE38),
-:deep(#HEADLINE39),
-:deep(#HEADLINE40),
-:deep(#HEADLINE146),
-:deep(#IMAGE24),
-:deep(#IMAGE25),
-:deep(#IMAGE48),
-:deep(#LINE5),
-:deep(#BOX9),
-:deep(#BOX10),
-:deep(#BOX50) {
-    opacity: 1 !important;
-    visibility: visible !important;
+/* --- SECTION 5: LỊCH TRÌNH BUỔI TIỆC & MÀU SẮC TRANG PHỤC --- */
+:deep(#GROUP36) {
+    top: 15px !important;
+    left: 12px !important;
+    width: 380px !important;
+    height: 48px !important;
+    z-index: 5 !important;
 }
 
 :deep(#HEADLINE38) {
-    width: 320px !important;
+    width: 330px !important;
+    left: 48px !important;
+    top: 0px !important;
 }
 
 :deep(#HEADLINE38 > .ladi-headline) {
-    font-family: 'VVZOSGhVGFMSdGY', 'Playball', 'Lora', cursive, serif !important;
-    font-size: 26px !important;
-    line-height: 1.4 !important;
+    font-family: 'VVZOSGhVGFMSdGY', 'Great Vibes', 'Playball', 'Lora', cursive, serif !important;
+    font-size: 34px !important;
+    line-height: 1.25 !important;
     color: #ffffff !important;
     text-align: left !important;
     font-style: italic !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45) !important;
 }
 
 :deep(#LINE10) {
-    top: 18px !important;
+    top: 22px !important;
+    left: 0px !important;
+    width: 42px !important;
 }
 
-/* Căn chỉnh các mốc thời gian cô đọng, dời lên cao trên nền tường trắng để hoàn toàn không che mặt/miệng cô dâu */
+:deep(#LINE10 > .ladi-line > .ladi-line-container) {
+    border-top: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Khối Màu sắc trang phục & Palette: Cân đối khoảng cách phía dưới */
+:deep(#GROUP73) {
+    top: 330px !important;
+    left: 55px !important;
+}
+
+:deep(#GROUP35) {
+    width: 360px !important;
+    height: 48px !important;
+}
+
+:deep(#HEADLINE135) {
+    width: 300px !important;
+    left: 0px !important;
+    top: 0px !important;
+}
+
+:deep(#HEADLINE135 > .ladi-headline) {
+    font-family: 'VVZOSGhVGFMSdGY', 'Great Vibes', 'Playball', 'Lora', cursive, serif !important;
+    font-size: 34px !important;
+    line-height: 1.25 !important;
+    color: #ffffff !important;
+    text-align: right !important;
+    font-style: italic !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45) !important;
+}
+
+:deep(#LINE11) {
+    top: 22px !important;
+    left: 306px !important;
+    width: 50px !important;
+}
+
+:deep(#LINE11 > .ladi-line > .ladi-line-container) {
+    border-top: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+}
+
+:deep(#GROUP24) {
+    top: 60px !important;
+    left: 105px !important;
+}
+
+:deep(#BOX28 > .ladi-box),
+:deep(#BOX29 > .ladi-box),
+:deep(#BOX30 > .ladi-box),
+:deep(#BOX31 > .ladi-box) {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+}
+
+/* --- TRỤC DỌC & CÁC MỐC TIMELINE DÀN ĐỀU, THOÁNG ĐÃNG (TRỤC X = 175.0px, BỀ RỘNG 280px) --- */
+:deep(#LINE5) {
+    position: absolute !important;
+    top: 80px !important;
+    left: 174px !important;
+    width: 2px !important;
+    height: 180px !important;
+    background: rgba(255, 255, 255, 0.75) !important;
+    z-index: 2 !important;
+    transform-origin: top center !important;
+}
+
+:deep(#LINE5 > .ladi-line) {
+    display: none !important;
+}
+
+/* Chấm tròn: 10px x 10px, tâm chuẩn xác tại X = 170 + 5 = 175.0px */
+:deep(#BOX9),
+:deep(#BOX10),
+:deep(#BOX50) {
+    width: 10px !important;
+    height: 10px !important;
+    left: 170px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    z-index: 4 !important;
+}
+
+:deep(#BOX9 > .ladi-box),
+:deep(#BOX10 > .ladi-box),
+:deep(#BOX50 > .ladi-box) {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45) !important;
+    border: none !important;
+}
+
+/* Mốc 1: Tâm Y = 95px (Cách Tiêu đề trên 65px) */
 :deep(#IMAGE24) {
-    top: 56px !important;
-    left: 130px !important;
-    width: 44px !important;
-    height: 38px !important;
-}
-
-:deep(#IMAGE24 > .ladi-image > .ladi-image-background) {
-    width: 44px !important;
-    height: 38px !important;
-    background-size: contain !important;
+    top: 74px !important;
+    left: 110px !important;
+    width: 42px !important;
+    height: 42px !important;
 }
 
 :deep(#BOX9) {
-    top: 71px !important;
-    left: 191px !important;
+    top: 90px !important;
 }
 
 :deep(#HEADLINE39) {
-    top: 60px !important;
-    left: 212px !important;
-    width: 195px !important;
+    top: 74px !important;
+    left: 200px !important;
+    width: 205px !important;
 }
 
+/* Mốc 2: Tâm Y = 170px (Cách Mốc 1 đúng 75px) */
 :deep(#IMAGE25) {
-    top: 116px !important;
-    left: 130px !important;
-    width: 44px !important;
-    height: 28px !important;
-}
-
-:deep(#IMAGE25 > .ladi-image > .ladi-image-background) {
-    width: 44px !important;
-    height: 28px !important;
-    background-size: contain !important;
+    top: 149px !important;
+    left: 110px !important;
+    width: 42px !important;
+    height: 42px !important;
 }
 
 :deep(#BOX10) {
-    top: 125px !important;
-    left: 191px !important;
+    top: 165px !important;
 }
 
 :deep(#HEADLINE40) {
-    top: 114px !important;
-    left: 212px !important;
-    width: 195px !important;
+    top: 149px !important;
+    left: 200px !important;
+    width: 205px !important;
 }
 
+/* Mốc 3: Tâm Y = 245px (Cách Mốc 2 đúng 75px; Cách Tiêu đề dưới 85px) */
 :deep(#IMAGE48) {
-    top: 170px !important;
-    left: 132px !important;
-    width: 40px !important;
+    top: 224px !important;
+    left: 110px !important;
+    width: 42px !important;
     height: 42px !important;
-}
-
-:deep(#IMAGE48 > .ladi-image > .ladi-image-background) {
-    width: 40px !important;
-    height: 42px !important;
-    background-size: contain !important;
 }
 
 :deep(#BOX50) {
-    top: 181px !important;
-    left: 191px !important;
+    top: 240px !important;
 }
 
 :deep(#HEADLINE146) {
-    top: 170px !important;
-    left: 212px !important;
-    width: 195px !important;
+    top: 224px !important;
+    left: 200px !important;
+    width: 205px !important;
 }
 
-:deep(#LINE5) {
-    top: 56px !important;
-    left: 187px !important;
-    height: 140px !important;
+/* Căn chỉnh icon bên trong sắc nét, to rõ */
+:deep(#IMAGE24 > .ladi-image > .ladi-image-background),
+:deep(#IMAGE25 > .ladi-image > .ladi-image-background),
+:deep(#IMAGE48 > .ladi-image > .ladi-image-background) {
+    width: 100% !important;
+    height: 100% !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.45)) !important;
 }
 
-:deep(#HEADLINE39 > .ladi-headline),
-:deep(#HEADLINE40 > .ladi-headline),
-:deep(#HEADLINE146 > .ladi-headline) {
+/* Typography phân cấp thị giác rõ ràng, thoáng đãng */
+:deep(.timeline-time) {
+    display: block;
+    font-family: 'TESQSSRUdVTEFSLlRURg', 'Lora', serif !important;
+    font-size: 16.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.8px !important;
+    color: #ffffff !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) !important;
+    line-height: 1.25 !important;
+}
+
+:deep(.timeline-title) {
+    display: block;
     font-family: 'TESQSSRUdVTEFSLlRURg', 'Lora', serif !important;
     font-size: 13.5px !important;
-    line-height: 1.35 !important;
-    letter-spacing: 0.3px !important;
-    color: #ffffff !important;
+    font-weight: 500 !important;
+    letter-spacing: 1.5px !important;
+    color: rgba(255, 255, 255, 0.95) !important;
     text-transform: uppercase !important;
-    text-align: left !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45) !important;
+    margin-top: 4px !important;
+    line-height: 1.25 !important;
+}
+
+/* --- HIỆU ỨNG UX CUỘN TỚI MỚI CHẠY (SCROLL-TRIGGERED ANIMATIONS) --- */
+:deep(#LINE5.ladi-animation) {
+    animation: timelineLineGrow 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+
+:deep(#IMAGE24.ladi-animation),
+:deep(#BOX9.ladi-animation),
+:deep(#HEADLINE39.ladi-animation) {
+    animation: timelineItemFadeIn 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both !important;
+}
+
+:deep(#IMAGE25.ladi-animation),
+:deep(#BOX10.ladi-animation),
+:deep(#HEADLINE40.ladi-animation) {
+    animation: timelineItemFadeIn 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both !important;
+}
+
+:deep(#IMAGE48.ladi-animation),
+:deep(#BOX50.ladi-animation),
+:deep(#HEADLINE146.ladi-animation) {
+    animation: timelineItemFadeIn 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.46s both !important;
+}
+
+@keyframes timelineLineGrow {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes timelineItemFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 :deep(#IMAGE27) {
@@ -2164,10 +2329,12 @@ onUnmounted(() => {
 }
 
 @media (max-width: 380px) {
+
     :deep(#HEADLINE140 > .ladi-headline),
     :deep(#HEADLINE141 > .ladi-headline) {
         font-size: 17px !important;
     }
+
     :deep(#HEADLINE142 > .ladi-headline) {
         font-size: 36px !important;
     }
@@ -2221,8 +2388,17 @@ onUnmounted(() => {
 }
 
 @keyframes pulseHeart {
-    0%, 100% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.2); opacity: 1; }
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
 }
 
 /* Empty State khi chưa có lời chúc nào */
@@ -2239,8 +2415,15 @@ onUnmounted(() => {
 }
 
 @keyframes fadeInEmpty {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 :deep(.empty-icon-box) {
@@ -2264,8 +2447,15 @@ onUnmounted(() => {
 }
 
 @keyframes floatIcon {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-5px) rotate(3deg); }
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(3deg);
+    }
 }
 
 :deep(.empty-sparkle) {
@@ -2288,8 +2478,17 @@ onUnmounted(() => {
 }
 
 @keyframes sparkleTwinkle {
-    0%, 100% { opacity: 0.25; transform: scale(0.75); }
-    50% { opacity: 1; transform: scale(1.2); }
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scale(0.75);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
 }
 
 :deep(.empty-title) {
@@ -2386,8 +2585,15 @@ onUnmounted(() => {
 }
 
 @keyframes fadeInWish {
-    from { opacity: 0; transform: translateY(-8px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 :deep(.jmii-wish-header) {
@@ -2443,9 +2649,20 @@ onUnmounted(() => {
 }
 
 @keyframes inputHighlightPulse {
-    0% { outline: 2px solid #705628; box-shadow: 0 0 0 4px rgba(112, 86, 40, 0.35); }
-    50% { outline: 2px solid #705628; box-shadow: 0 0 0 7px rgba(112, 86, 40, 0.2); }
-    100% { outline: none; box-shadow: none; }
+    0% {
+        outline: 2px solid #705628;
+        box-shadow: 0 0 0 4px rgba(112, 86, 40, 0.35);
+    }
+
+    50% {
+        outline: 2px solid #705628;
+        box-shadow: 0 0 0 7px rgba(112, 86, 40, 0.2);
+    }
+
+    100% {
+        outline: none;
+        box-shadow: none;
+    }
 }
 
 :deep(.is-loading) {
