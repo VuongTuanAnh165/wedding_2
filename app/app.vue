@@ -984,48 +984,49 @@ const switchSide = (side: WeddingSide) => {
 }
 
 // Lịch Tháng 12/2026 (December 2026: 31 ngày, ngày 1 bắt đầu vào Thứ Ba)
-// 7 cột phân bổ đều tăm tắp với bước nhảy 47.7px (centers: 23.85, 71.55, 119.25, 166.95, 214.65, 262.35, 310.05)
+// 7 cột phân bổ đều với độ rộng 56px mỗi cột (left: 0, 56, 112, 168, 224, 280, 336)
+// Lề 2 bên thu gọn từ 43px xuống 14px giúp lịch to rõ và sát viền 2 bên chuẩn thiết kế
 const calendarDays2026 = [
-    // Hàng 1 (top: 40.5px)
-    { day: 1, top: 40.5, left: 58.55 },
-    { day: 2, top: 40.5, left: 106.25 },
-    { day: 3, top: 40.5, left: 153.95 },
-    { day: 4, top: 40.5, left: 201.65 },
-    { day: 5, top: 40.5, left: 249.35 },
-    { day: 6, top: 40.5, left: 297.05 },
+    // Hàng 1 (top: 48px)
+    { day: 1, top: 48, left: 56 },
+    { day: 2, top: 48, left: 112 },
+    { day: 3, top: 48, left: 168 },
+    { day: 4, top: 48, left: 224 },
+    { day: 5, top: 48, left: 280 },
+    { day: 6, top: 48, left: 336 },
 
-    // Hàng 2 (top: 76.1px)
-    { day: 7, top: 76.1, left: 10.85 },
-    { day: 8, top: 76.1, left: 58.55 },
-    { day: 9, top: 76.1, left: 106.25 },
-    { day: 10, top: 76.1, left: 153.95 },
-    { day: 11, top: 76.1, left: 201.65 },
-    { day: 12, top: 76.1, left: 249.35 },
-    { day: 13, top: 76.1, left: 297.05 },
+    // Hàng 2 (top: 92px)
+    { day: 7, top: 92, left: 0 },
+    { day: 8, top: 92, left: 56 },
+    { day: 9, top: 92, left: 112 },
+    { day: 10, top: 92, left: 168 },
+    { day: 11, top: 92, left: 224 },
+    { day: 12, top: 92, left: 280 },
+    { day: 13, top: 92, left: 336 },
 
-    // Hàng 3 (top: 111.7px)
-    { day: 14, top: 111.7, left: 10.85 },
-    { day: 15, top: 111.7, left: 58.55 },
-    { day: 16, top: 111.7, left: 106.25 },
-    { day: 17, top: 111.7, left: 153.95 },
-    { day: 18, top: 111.7, left: 201.65 },
-    { day: 19, top: 111.7, left: 249.35 },
-    { day: 20, top: 111.7, left: 297.05 },
+    // Hàng 3 (top: 136px)
+    { day: 14, top: 136, left: 0 },
+    { day: 15, top: 136, left: 56 },
+    { day: 16, top: 136, left: 112 },
+    { day: 17, top: 136, left: 168 },
+    { day: 18, top: 136, left: 224 },
+    { day: 19, top: 136, left: 280 },
+    { day: 20, top: 136, left: 336 },
 
-    // Hàng 4 (top: 147.4px)
-    { day: 21, top: 147.4, left: 10.85 },
-    { day: 22, top: 147.4, left: 58.55 },
-    { day: 23, top: 147.4, left: 106.25 },
-    { day: 24, top: 147.4, left: 153.95 },
-    { day: 25, top: 147.4, left: 201.65 },
-    { day: 26, top: 147.4, left: 249.35 }, // SAT - Nhà gái (26/12/2026)
-    { day: 27, top: 147.4, left: 297.05 }, // SUN - Nhà trai (27/12/2026)
+    // Hàng 4 (top: 180px)
+    { day: 21, top: 180, left: 0 },
+    { day: 22, top: 180, left: 56 },
+    { day: 23, top: 180, left: 112 },
+    { day: 24, top: 180, left: 168 },
+    { day: 25, top: 180, left: 224 },
+    { day: 26, top: 180, left: 280 }, // SAT - Nhà gái (26/12/2026)
+    { day: 27, top: 180, left: 336 }, // SUN - Nhà trai (27/12/2026)
 
-    // Hàng 5 (top: 182.7px)
-    { day: 28, top: 182.7, left: 10.85 },
-    { day: 29, top: 182.7, left: 58.55 },
-    { day: 30, top: 182.7, left: 106.25 },
-    { day: 31, top: 182.7, left: 153.95 }
+    // Hàng 5 (top: 224px)
+    { day: 28, top: 224, left: 0 },
+    { day: 29, top: 224, left: 56 },
+    { day: 30, top: 224, left: 112 },
+    { day: 31, top: 224, left: 168 }
 ]
 
 // Ngày cưới cần khoanh: Nhà gái -> 26, Nhà trai -> 27
@@ -1034,18 +1035,19 @@ const highlightedWeddingDay = computed(() => {
 })
 
 // Tọa độ định vị trái tim (#IMAGE33) quanh đúng ngày cưới theo từng bên:
-// - Nhà gái: 26/12/2026 (Thứ Bảy, Cột 6 - SAT) -> top: 142.82px, left: 244.41px
-// - Nhà trai: 27/12/2026 (Chủ Nhật, Cột 7 - SUN) -> top: 142.82px, left: 292.11px
+// - Cột 5 (SAT): tâm 308px -> left = 308 - 23 = 285px
+// - Cột 6 (SUN): tâm 364px -> left = 364 - 23 = 341px
+// - Hàng 4: top ngày cưới 180px, tâm số 193px -> top tim = 174px
 const heartStyle = computed(() => {
     if (currentSide.value === 'gai') {
         return {
-            top: '142.82px',
-            left: '244.41px'
+            top: '174px',
+            left: '285px'
         }
     }
     return {
-        top: '142.82px',
-        left: '292.11px'
+        top: '174px',
+        left: '341px'
     }
 })
 
@@ -2184,30 +2186,39 @@ onUnmounted(() => {
     background-repeat: no-repeat !important;
 }
 
-/* Lịch Tháng 12/2026 */
+/* Lịch Tháng 12/2026 - Mở rộng kích thước & thu hẹp lề trái phải sát mép theo ảnh mẫu */
 :deep(#GROUP43) {
-    left: 43px !important;
-    width: 334px !important;
+    left: 14px !important;
+    width: 392px !important;
+    height: 340px !important;
 }
 
 :deep(#HEADLINE81) {
-    width: 334px !important;
+    width: 392px !important;
     left: 0px !important;
     top: 0px !important;
+    height: 64px !important;
 }
 
 :deep(#HEADLINE81 > .ladi-headline) {
     font-family: 'MUZUViWSVAtQXJjaXReWEtQmVnYXRyaSvdGY', 'MUZUViWSVAtSElHSCTUElSSVRFRCPVEY', cursive !important;
-    font-size: 38px !important;
-    line-height: 1.35 !important;
+    font-size: 40px !important;
+    line-height: 1.25 !important;
     color: rgb(146, 131, 98) !important;
     text-align: center !important;
     letter-spacing: 0.5px !important;
 }
 
+:deep(#GROUP37) {
+    width: 392px !important;
+    height: 265px !important;
+    top: 72px !important;
+    left: 0px !important;
+}
+
 :deep(#GROUP69) {
-    width: 334px !important;
-    height: 22px !important;
+    width: 392px !important;
+    height: 24px !important;
     top: 0px !important;
     left: 0px !important;
 }
@@ -2219,19 +2230,19 @@ onUnmounted(() => {
 :deep(#HEADLINE95),
 :deep(#HEADLINE96),
 :deep(#HEADLINE97) {
-    width: 47.7px !important;
-    height: 22px !important;
+    width: 56px !important;
+    height: 24px !important;
     top: 0px !important;
     text-align: center !important;
 }
 
 :deep(#HEADLINE91) { left: 0px !important; }
-:deep(#HEADLINE92) { left: 47.7px !important; }
-:deep(#HEADLINE93) { left: 95.4px !important; }
-:deep(#HEADLINE94) { left: 143.1px !important; }
-:deep(#HEADLINE95) { left: 190.8px !important; }
-:deep(#HEADLINE96) { left: 238.5px !important; }
-:deep(#HEADLINE97) { left: 286.2px !important; }
+:deep(#HEADLINE92) { left: 56px !important; }
+:deep(#HEADLINE93) { left: 112px !important; }
+:deep(#HEADLINE94) { left: 168px !important; }
+:deep(#HEADLINE95) { left: 224px !important; }
+:deep(#HEADLINE96) { left: 280px !important; }
+:deep(#HEADLINE97) { left: 336px !important; }
 
 :deep(#HEADLINE91 > .ladi-headline),
 :deep(#HEADLINE92 > .ladi-headline),
@@ -2240,25 +2251,27 @@ onUnmounted(() => {
 :deep(#HEADLINE95 > .ladi-headline),
 :deep(#HEADLINE96 > .ladi-headline),
 :deep(#HEADLINE97 > .ladi-headline) {
-    font-family: 'TESQSSRUdVTEFSLlRURg', 'Lora', serif !important;
-    font-size: 8px !important;
+    font-family: 'TESQSTRUJQkMRCUVEY', 'TESQSSRUdVTEFSLlRURg', 'Lora', serif !important;
+    font-size: 10.5px !important;
     font-weight: 500 !important;
-    line-height: 22px !important;
+    line-height: 24px !important;
     color: rgb(146, 131, 98) !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.3px !important;
+    letter-spacing: 0.2px !important;
     white-space: nowrap !important;
     text-align: center !important;
 }
 
 :deep(.calendar-day-number) {
-    width: 26px !important;
+    width: 56px !important;
+    height: 26px !important;
+    text-align: center !important;
 }
 
 :deep(.calendar-day-number > .ladi-headline) {
     font-family: 'TESQSSRUdVTEFSLlRURg', 'Lora', serif !important;
-    font-size: 13px !important;
-    line-height: 1.6 !important;
+    font-size: 18px !important;
+    line-height: 26px !important;
     color: rgb(146, 131, 98) !important;
     text-align: center !important;
 }
@@ -2270,6 +2283,16 @@ onUnmounted(() => {
 :deep(.calendar-day-number.is-highlighted > .ladi-headline) {
     font-weight: 700 !important;
     color: rgb(110, 95, 60) !important;
+}
+
+:deep(#IMAGE33),
+:deep(#IMAGE33 > .ladi-image),
+:deep(#IMAGE33 > .ladi-image > .ladi-image-background) {
+    width: 46px !important;
+    height: 39px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
 }
 
 :deep(#IMAGE33) {
